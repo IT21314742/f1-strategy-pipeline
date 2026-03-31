@@ -29,3 +29,9 @@ services:
     networks:
       - f1_network
 
+volumes:
+  postgres_data:
+
+networks:
+  f1_network:
+    driver: bridge
