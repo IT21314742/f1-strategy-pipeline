@@ -20,5 +20,5 @@ services:
     image: dpage/pgadmin4
     container_name: f1_pgadmin
     environment:
-      - PGADMIN_DEFAULT_EMAIL: admin@f1strategy.com
-      
+      PGADMIN_DEFAULT_EMAIL: admin@f1strategy.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
