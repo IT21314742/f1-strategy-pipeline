@@ -17,4 +17,8 @@ services:
       - f1_network
 
   pgadmin:
-    
+    image: dpage/pgadmin4
+    container_name: f1_pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL: admin@f1strategy.com
+      
