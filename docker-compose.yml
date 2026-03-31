@@ -15,3 +15,6 @@ services:
       ./sql/init:/docker-entrypoint-initdb.d
     networks:
       - f1_network
+
+  pgadmin:
+    
