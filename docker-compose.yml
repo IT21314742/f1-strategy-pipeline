@@ -13,3 +13,5 @@ services:
     volumes:
       -postgres_data:/var/lib/postgresql/data
       ./sql/init:/docker-entrypoint-initdb.d
+    networks:
+      - f1_network
