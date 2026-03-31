@@ -3,3 +3,6 @@ version: '3.8'
 services:
   postgres:
     image: postgres:15
+    container_name: f1_strategy_db
+    environment:
+      - POSTGRES_USER: f1_analyst
