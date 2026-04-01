@@ -19,3 +19,7 @@ CREATE TABLE seasons (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Teams dimension
+CREATE TABLE teams (
+    
+)
