@@ -86,4 +86,5 @@ CREATE TABLE lap_times (
     sector1_time TIME
     sector2_time TIME
     sector3_time TIME
+    position INT,
 )
