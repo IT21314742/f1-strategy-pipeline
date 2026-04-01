@@ -22,5 +22,7 @@ CREATE TABLE seasons (
 -- Teams dimension
 CREATE TABLE teams (
     team_id VARCHAR(10) PRIMARY KEY,
+    team_name VARCHAR(100) NOT NULL,
+    
 
 );
