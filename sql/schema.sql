@@ -83,4 +83,7 @@ CREATE TABLE lap_times (
     race_id INT REFERENCES races(race_id),
     driver_id VARCHAR(3) REFERENCES drivers(driver_id),
     lap_number INT NOT NULL,
+    sector1_time TIME
+    sector_time TIME
+    sector_time TIME
 )
