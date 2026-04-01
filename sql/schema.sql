@@ -41,5 +41,10 @@ CREATE TABLE drivers (
 
 -- Races dimension
 CREATE TABLE races (
-    
+    race_id SERIAL PRIMARY KEY,
+    season_id INT REFERENCES seasons(season_id),
+    round_number INT NOT NULL,
+    race_name VARCHAR(100) NOT NULL,
+    circuit_name VARCHAR(100),
+    country VARCHAR(50,)
 )
