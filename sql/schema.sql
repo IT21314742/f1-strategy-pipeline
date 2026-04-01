@@ -94,5 +94,5 @@ CREATE TABLE lap_times (
 
 -- Stints (continuos tire runs)
 CREATE TABLE stints (
-    
+    stint_id SERIAL PRIMARY KEY,
 )
