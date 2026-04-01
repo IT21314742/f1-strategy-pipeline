@@ -98,4 +98,5 @@ CREATE TABLE stints (
     race_id INT REFERENCES races(race_id),
     driver_id VARCHAR(3) REFERENCES drivers(driver_id),
     stint_number INT NOT NULL,
+    start_lap INT NOT NULL,
 )
