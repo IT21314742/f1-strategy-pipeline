@@ -16,3 +16,6 @@ try:
     print(f"✅ Connected to PostgreSQL successfully!")
     print(f"'📦 Version: {version[0]}")
     
+    cursor.close()
+    conn.close()
+    
