@@ -9,10 +9,10 @@ services:
       POSTGRES_PASSWORD: f1_strategy_2025
       POSTGRES_DB: f1_strategy
     ports:
-      -"5432:5432"
+      - "5432:5432"  # Added space after hyphen
     volumes:
-      -postgres_data:/var/lib/postgresql/data
-      ./sql/init:/docker-entrypoint-initdb.d
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/init:/docker-entrypoint-initdb.d  # Added space after hyphen and fixed path
     networks:
       - f1_network
 
@@ -23,7 +23,7 @@ services:
       PGADMIN_DEFAULT_EMAIL: admin@f1strategy.com
       PGADMIN_DEFAULT_PASSWORD: admin123
     ports:
-      - "5050:80"
+      - "5050:80"  # Added space after hyphen
     depends_on:
       - postgres
     networks:
