@@ -27,3 +27,4 @@ CREATE TABLE teams (
     country VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
