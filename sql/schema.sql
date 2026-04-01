@@ -10,3 +10,8 @@ DROP TABLE IF EXISTS teams CASCADE;
 DROP TABLE IF EXISTS races CASCADE;
 DROP TABLE IF EXISTS seasons CASCADE;
 
+
+--- Seasons dimension
+CREATE TABLE seasons (
+    
+)
