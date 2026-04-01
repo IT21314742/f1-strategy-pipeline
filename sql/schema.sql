@@ -71,5 +71,7 @@ CREATE TABLE race_results (
     driver_id VARCHAR(3) REFERENCES drivers(driver_id),
     final_position INT,
     points DECIMAL(5,2),
-    
+    status VARCHAR(50),
+    fastest_lap_time TIME,
+    fastest_lap_number INT,
 )
