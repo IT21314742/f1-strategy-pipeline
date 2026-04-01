@@ -25,6 +25,5 @@ CREATE TABLE teams (
     team_name VARCHAR(100) NOT NULL,
     engine_manufacturer VARCHAR(50),
     country VARCHAR(50),
-    
-
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
