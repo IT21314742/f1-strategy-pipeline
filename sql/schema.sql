@@ -100,4 +100,5 @@ CREATE TABLE stints (
     stint_number INT NOT NULL,
     start_lap INT NOT NULL,
     end_lap INT NOT NULL,
+    tire_compound VARCHAR(10),
 )
