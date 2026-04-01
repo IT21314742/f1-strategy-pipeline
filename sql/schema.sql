@@ -52,3 +52,4 @@ CREATE TABLE races (
     UNIQUE(season_id, round_number)
 );
 
+-- Qualifying results fact table
