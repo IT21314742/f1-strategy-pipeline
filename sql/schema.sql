@@ -49,5 +49,5 @@ CREATE TABLE races (
     country VARCHAR(50),
     race_date DATE,
     qualifying_date DATE,
-    
-)
+    UNIQUE(season_id, round_number)
+);
