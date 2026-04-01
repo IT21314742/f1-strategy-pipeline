@@ -33,4 +33,6 @@ CREATE TABLE drivers (
     driver_id VARCHAR(3) PRIMARY KEY,
     driver_name VARCHAR(100) NOT NULL,
     nationality VARCHAR(50),
+    date_of_birth DATE;
+    
 )
