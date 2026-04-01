@@ -91,3 +91,4 @@ CREATE TABLE lap_times (
     tire_life INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
