@@ -87,4 +87,5 @@ CREATE TABLE lap_times (
     sector2_time TIME
     sector3_time TIME
     position INT,
+    tire_compound VARCHAR,
 )
