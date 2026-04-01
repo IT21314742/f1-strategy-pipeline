@@ -96,4 +96,5 @@ CREATE TABLE lap_times (
 CREATE TABLE stints (
     stint_id SERIAL PRIMARY KEY,
     race_id INT REFERENCES races(race_id),
+    driver_id VARCHAR(3) REFERENCES drivers(driver_id),
 )
