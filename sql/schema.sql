@@ -29,3 +29,7 @@ CREATE TABLE teams (
 );
 
 -- Drivers dimension
+CREATE TABLE drivers (
+    driver_id VARCHAR(3) PRIMARY KEY,
+    driver_name VARCHAR(100) NOT NULL,
+)
