@@ -105,3 +105,4 @@ CREATE TABLE stints (
     avg_lap_time TIME,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
