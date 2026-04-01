@@ -92,3 +92,7 @@ CREATE TABLE lap_times (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Stints (continuos tire runs)
+CREATE TABLE stints (
+    
+)
