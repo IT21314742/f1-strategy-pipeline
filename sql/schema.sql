@@ -74,4 +74,5 @@ CREATE TABLE race_results (
     status VARCHAR(50),
     fastest_lap_time TIME,
     fastest_lap_number INT,
-)
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
