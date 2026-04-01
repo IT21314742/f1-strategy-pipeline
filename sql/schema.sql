@@ -61,4 +61,5 @@ CREATE TABLE qualifying_results (
     q2_time TIME,
     q3_time TIME,
     grid_position INT,
-)
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
