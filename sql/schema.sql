@@ -38,3 +38,4 @@ CREATE TABLE drivers (
     driver_number INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
