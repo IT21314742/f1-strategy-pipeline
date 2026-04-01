@@ -1,2 +1,4 @@
 -- were following a clean state protocol here. so in order to do that, first we need to clear anything in the database similar to what were gonna add later.
 -- So were going to Drop tables if they exist
+
+DROP TABLE IF EXISTS lap_times CASCADE;
