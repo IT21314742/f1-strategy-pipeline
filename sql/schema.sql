@@ -21,5 +21,5 @@ CREATE TABLE seasons (
 
 -- Teams dimension
 CREATE TABLE teams (
-    
-)
+
+);
