@@ -85,5 +85,5 @@ CREATE TABLE lap_times (
     lap_number INT NOT NULL,
     sector1_time TIME
     sector2_time TIME
-    sector_time TIME
+    sector3_time TIME
 )
