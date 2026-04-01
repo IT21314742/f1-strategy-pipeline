@@ -99,4 +99,5 @@ CREATE TABLE stints (
     driver_id VARCHAR(3) REFERENCES drivers(driver_id),
     stint_number INT NOT NULL,
     start_lap INT NOT NULL,
+    end_lap INT NOT NULL,
 )
