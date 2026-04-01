@@ -102,4 +102,6 @@ CREATE TABLE stints (
     end_lap INT NOT NULL,
     tire_compound VARCHAR(10),
     stint_length INT
-)
+    avg_lap_time TIME,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
