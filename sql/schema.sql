@@ -57,5 +57,8 @@ CREATE TABLE qualifying_results (
     qualifying_id SERIAL PRIMARY KEY,
     race_id INT REFERENCES races(race_id),
     driver_id VARCHAR(3) REFERENCES drivers(driver_id),
-    
+    q1_time TIME,
+    q2_time TIME,
+    q3_time TIME,
+    grid_position INT,
 )
