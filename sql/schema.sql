@@ -36,4 +36,5 @@ CREATE TABLE drivers (
     date_of_birth DATE;
     team_id VARCHAR(10) REFERENCES teams(team_id),
     driver_number INT,
-)
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
