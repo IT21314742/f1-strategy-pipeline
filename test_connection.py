@@ -9,4 +9,6 @@ try:
         password="f1_strategy_2025"
     )
     
+    cursor = conn.cursor()
+    cursor.execute("SELECT version();")
     
