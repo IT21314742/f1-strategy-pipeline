@@ -84,6 +84,6 @@ CREATE TABLE lap_times (
     driver_id VARCHAR(3) REFERENCES drivers(driver_id),
     lap_number INT NOT NULL,
     sector1_time TIME
-    sector_time TIME
+    sector2_time TIME
     sector_time TIME
 )
