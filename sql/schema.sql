@@ -89,4 +89,5 @@ CREATE TABLE lap_times (
     position INT,
     tire_compound VARCHAR,
     tire_life INT,
-)
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
