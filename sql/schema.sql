@@ -70,4 +70,6 @@ CREATE TABLE race_results (
     race_id INT REFERENCES races(race_id),
     driver_id VARCHAR(3) REFERENCES drivers(driver_id),
     final_position INT,
+    points DECIMAL(5,2),
+    
 )
