@@ -2,3 +2,4 @@
 -- So were going to Drop tables if they exist
 
 DROP TABLE IF EXISTS lap_times CASCADE;
+DROP TABLE IF EXISTS stints CASCADE;
