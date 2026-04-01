@@ -6,4 +6,7 @@ try:
         port=5432,
         database="f1_strategy",
         user="f1_analyst",
+        password="f1_strategy_2025"
     )
+    
+    
