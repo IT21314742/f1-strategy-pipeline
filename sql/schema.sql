@@ -24,6 +24,7 @@ CREATE TABLE teams (
     team_id VARCHAR(10) PRIMARY KEY,
     team_name VARCHAR(100) NOT NULL,
     engine_manufacturer VARCHAR(50),
+    country VARCHAR(50),
     
 
 );
