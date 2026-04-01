@@ -110,3 +110,4 @@ CREATE TABLE stints (
 CREATE INDEX idx_lap_times_race_driver ON lap_times(race_id, driver_id);
 CREATE INDEX idx_lap_times_lap_number ON lap_times(lap_number);
 CREATE INDEX idx_stints_race_driver ON stints(race_id, driver_id);
+CREATE INDEX idx_race_results_race ON race_results()
