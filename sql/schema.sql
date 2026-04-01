@@ -46,5 +46,8 @@ CREATE TABLE races (
     round_number INT NOT NULL,
     race_name VARCHAR(100) NOT NULL,
     circuit_name VARCHAR(100),
-    country VARCHAR(50,)
+    country VARCHAR(50),
+    race_date DATE,
+    qualifying_date DATE,
+    
 )
