@@ -63,3 +63,8 @@ CREATE TABLE qualifying_results (
     grid_position INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Race results fact table
+CREATE TABLE race_results (
+    
+)
