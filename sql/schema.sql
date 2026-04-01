@@ -23,6 +23,7 @@ CREATE TABLE seasons (
 CREATE TABLE teams (
     team_id VARCHAR(10) PRIMARY KEY,
     team_name VARCHAR(100) NOT NULL,
+    nationality VARCHAR(50),
     
 
 );
