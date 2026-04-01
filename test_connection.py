@@ -1,7 +1,7 @@
 import psycopg2
 
 try:
-    conn = psycopg2,connect(
+    conn = psycopg2.connect(
         host="localhost",
         port=5432,
         database="f1_strategy",
@@ -14,11 +14,10 @@ try:
     version = cursor.fetchone()
     
     print(f"✅ Connected to PostgreSQL successfully!")
-    print(f"'📦 Version: {version[0]}")
+    print(f"📦 Version: {version[0]}")
     
     cursor.close()
     conn.close()
     
 except Exception as e:
     print(f"❌ Connection failed: {e}")
-    
