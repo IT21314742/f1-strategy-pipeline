@@ -53,3 +53,7 @@ CREATE TABLE races (
 );
 
 -- Qualifying results fact table
+CREATE TABLE qualifying_results (
+    qualifying_id SERIAL PRIMARY KEY,
+    
+)
