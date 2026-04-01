@@ -13,5 +13,5 @@ DROP TABLE IF EXISTS seasons CASCADE;
 
 --- Seasons dimension
 CREATE TABLE seasons (
-    
+    season_id INT PRIMARY KEY,
 )
