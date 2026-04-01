@@ -95,4 +95,5 @@ CREATE TABLE lap_times (
 -- Stints (continuos tire runs)
 CREATE TABLE stints (
     stint_id SERIAL PRIMARY KEY,
+    race_id INT REFERENCES races(race_id),
 )
