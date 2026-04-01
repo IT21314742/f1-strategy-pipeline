@@ -12,3 +12,7 @@ try:
     cursor = conn.cursor()
     cursor.execute("SELECT version();")
     version = cursor.fetchone()
+    
+    print(f"✅ Connected to PostgreSQL successfully!")
+    print(f"'📦 Version: {version[0]}")
+    
