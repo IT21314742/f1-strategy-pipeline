@@ -107,4 +107,4 @@ CREATE TABLE stints (
 );
 
 -- Create indexes for performance
-CREATE INDEX idx_lap_times_race_driver ON lap_times()
+CREATE INDEX idx_lap_times_race_driver ON lap_times(race_id, driver_id);
