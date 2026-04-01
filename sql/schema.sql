@@ -51,3 +51,4 @@ CREATE TABLE races (
     qualifying_date DATE,
     UNIQUE(season_id, round_number)
 );
+
