@@ -11,4 +11,4 @@ try:
     
     cursor = conn.cursor()
     cursor.execute("SELECT version();")
-    
+    version = cursor.fetchone()
