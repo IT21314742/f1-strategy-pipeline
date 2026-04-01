@@ -16,5 +16,5 @@ CREATE TABLE seasons (
     season_id INT PRIMARY KEY,
     year INT NOT NULL UNIQUE,
     champion_driver_id VARCHAR(3),
-    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )
