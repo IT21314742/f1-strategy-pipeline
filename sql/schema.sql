@@ -82,5 +82,5 @@ CREATE TABLE lap_times (
     lap_id BIGSERIAL PRIMARY KEY,
     race_id INT REFERENCES races(race_id),
     driver_id VARCHAR(3) REFERENCES drivers(driver_id),
-    
+    lap_number INT NOT NULL,
 )
