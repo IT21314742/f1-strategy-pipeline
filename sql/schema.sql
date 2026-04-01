@@ -34,5 +34,6 @@ CREATE TABLE drivers (
     driver_name VARCHAR(100) NOT NULL,
     nationality VARCHAR(50),
     date_of_birth DATE;
-    
+    team_id VARCHAR(10) REFERENCES teams(team_id),
+    driver_number INT,
 )
