@@ -43,4 +43,6 @@ class F1DataPipeline:
         """Insert team if not exists"""
         team_id = team_name.replace(" ","_").upper()[:10]
         
-        
+        self.cursor.execute(
+            
+        )
