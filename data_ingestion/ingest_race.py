@@ -38,39 +38,39 @@ class F1DataPipeline:
             self.conn.commit()
             return year
         return result[0]
-    
+
     def ensure_team_exists(self, team_name):
         """Insert team if not exists"""
-        team_id = team_name.replace(" ","_").upper()[:10]
-        
-        self.cursor.execute(
-            "SELECT team_id FROM teams WHERE team_id = %s",
-            (team_id,)
-        )
+        team_id = team_name.replace(" ", "_").upper()[:10]
+
+        self.cursor.execute("SELECT team_id FROM teams WHERE team_id = %s", (team_id,))
         if not self.cursor.fetchone():
             self.cursor.execute(
                 "INSERT INTO teams (team_id, team_name) VALUES (%s, %s)",
-                (team_id, team_name)
+                (team_id, team_name),
             )
             self.conn.commit()
         return team_id
-    
+
     def ingest_race(self, year, grand_prix):
         """Ingest all data for a race"""
         print(f"🏁 Ingesting {year} {grand_prix}...")
-        
+
         # Get season ID
         season_id = self.ensure_season_exists(year)
-        
+
         # Load race session
-        race = ff1.get_session(year, grand_prix, 'R')
+        race = ff1.get_session(year, grand_prix, "R")
         race.load()
-        
+
         # Insert race
-        self.cursor.execute("""
+        self.cursor.execute(
+            """
                             INSERT INTO races (season_id, round_number, race_name, circuit_name, race_date)
                             
                             VALUES (%s, %s, %s, %s)
                             ON CONFLICT (season_id, round_number) DO NOTHING
                             RETURNING race_id
-                            """, )
+                            """, (season_id, race.event['RoundNumber'],
+                                  )
+        )
