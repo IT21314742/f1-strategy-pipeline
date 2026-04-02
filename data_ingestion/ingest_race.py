@@ -17,3 +17,4 @@ class F1DataPipeline:
             user="f1_analyst",
             password="f1_strategy_2025"
         )
+        self.cursor = self.conn.cursor()
