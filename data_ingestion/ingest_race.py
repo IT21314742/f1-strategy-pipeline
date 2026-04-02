@@ -91,3 +91,5 @@ class F1DataPipeline:
                 (season_id, race.event['RoundNumber'])
             )
             race_id = self.cursor.fetchone()[0]
+            
+        
