@@ -45,4 +45,5 @@ class F1DataPipeline:
         
         self.cursor.execute(
             "SELECT team_id FROM teams WHERE team_id = %s",
+            (team_id,)
         )
