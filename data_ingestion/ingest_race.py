@@ -27,3 +27,4 @@ class F1DataPipeline:
             "SELECT season_id FROM seasons WHERE year = %s"
             (year,)
         )
+        result = self.cursor
