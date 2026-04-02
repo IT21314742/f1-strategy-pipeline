@@ -12,5 +12,6 @@ class F1DataPipeline:
     def __init__(self):
         self.conn = psycopg2.connect(
             host="localhost",
+            port=5432,
             
         )
