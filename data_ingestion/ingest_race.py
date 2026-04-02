@@ -49,5 +49,5 @@ class F1DataPipeline:
         )
         if not self.cursor.fetchone():
             self.cursor.execute(
-                
+                "INSERT INTO teams (team_id, team_name) VALUES (%s, %s)",
             )
