@@ -21,6 +21,6 @@ class F1DataPipeline:
         
     def ensure_season_exists(self, year):
         """
-        
+        Check if season exists in database, insert if not
         """
         
