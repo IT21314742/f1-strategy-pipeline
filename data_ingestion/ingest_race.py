@@ -59,4 +59,5 @@ class F1DataPipeline:
         """Ingest all data for a race"""
         print(f"🏁 Ingesting {year} {grand_prix}...")
         
-        
+        # Get season ID
+        season_id = self
