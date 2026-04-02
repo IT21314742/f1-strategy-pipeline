@@ -56,4 +56,5 @@ class F1DataPipeline:
         return team_id
     
     def ingest_race(self, year, grand_prix):
+        """Ingest all data for a race"""
         
