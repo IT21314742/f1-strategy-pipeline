@@ -81,4 +81,4 @@ class F1DataPipeline:
             ),
         )
         
-        race_id_result = 
+        race_id_result = self.cursor.fetchone()
