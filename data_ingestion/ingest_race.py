@@ -90,3 +90,4 @@ class F1DataPipeline:
                 "SELECT race_id, FROM races WHERE season_id = %s AND round_number = %s",
                 (season_id, race.event['RoundNumber'])
             )
+            race_id = self.cursor.fetchone()[0]
