@@ -28,3 +28,5 @@ class F1DataPipeline:
             (year,)
         )
         result = self.cursor.fetchone()
+        
+        
