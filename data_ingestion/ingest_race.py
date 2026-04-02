@@ -23,4 +23,6 @@ class F1DataPipeline:
         """
         Check if season exists in database, insert if not
         """
-        
+        self.cursor.execute(
+            
+        )
