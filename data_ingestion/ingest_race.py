@@ -19,4 +19,4 @@ class F1DataPipeline:
         )
         self.cursor = self.conn.cursor()
         
-        
+    def ensure_season_exists()
