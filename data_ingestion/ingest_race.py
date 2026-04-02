@@ -37,3 +37,4 @@ class F1DataPipeline:
             )
             self.conn.commit()
             return year
+        return result[0]
