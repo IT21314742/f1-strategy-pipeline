@@ -71,4 +71,4 @@ class F1DataPipeline:
                             INSERT INTO races (season_id, round_number, race_name, circuit_name, race_date)
                             
                             VALUES (%s, %s, %s, %s)
-                            ON CONFLICT ()""")
+                            ON CONFLICT (season_id, round_number) """)
