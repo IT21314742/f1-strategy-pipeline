@@ -55,4 +55,5 @@ class F1DataPipeline:
             self.conn.commit()
         return team_id
     
-    
+    def ingest_race(self, year, grand_prix):
+        
