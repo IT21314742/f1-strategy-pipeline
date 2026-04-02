@@ -30,4 +30,6 @@ class F1DataPipeline:
         result = self.cursor.fetchone()
         
         if not result:
-            
+            self.cursor.execute(
+                
+            )
