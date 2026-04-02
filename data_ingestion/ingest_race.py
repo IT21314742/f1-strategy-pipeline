@@ -61,3 +61,4 @@ class F1DataPipeline:
         
         # Get season ID
         season_id = self.ensure_season_exists(year)
+        
