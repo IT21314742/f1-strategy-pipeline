@@ -14,4 +14,5 @@ class F1DataPipeline:
             host="localhost",
             port=5432,
             database="f1_analyst",
+            user="f1_analyst",
         )
