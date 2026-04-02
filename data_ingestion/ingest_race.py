@@ -10,4 +10,6 @@ ff1.Cache.enable_cache('f1_cache')
 
 class F1DataPipeline:
     def __init__(self):
-        
+        self.conn = psycopg2.connect(
+            
+        )
