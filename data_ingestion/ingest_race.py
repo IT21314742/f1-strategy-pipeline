@@ -35,3 +35,5 @@ class F1DataPipeline:
             self.cursor.execute(
                 "INSERT INTO seasons (season_id, year) VALUES (%s, %s)",
             )
+            self.conn.commit()
+            return year
