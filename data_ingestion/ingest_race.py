@@ -67,3 +67,4 @@ class F1DataPipeline:
         race.load()
         
         # Insert race
+        self.cursor.execute()
