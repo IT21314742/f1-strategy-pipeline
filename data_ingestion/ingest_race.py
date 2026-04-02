@@ -72,5 +72,6 @@ class F1DataPipeline:
                             ON CONFLICT (season_id, round_number) DO NOTHING
                             RETURNING race_id
                             """, (season_id, race.event['RoundNumber'],
-                                  race.event['EventName'], race.event['Location'])
+                                  race.event['EventName'], race.event['Location'],
+                                  )
         )
