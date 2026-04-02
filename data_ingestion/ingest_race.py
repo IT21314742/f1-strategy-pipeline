@@ -57,4 +57,4 @@ class F1DataPipeline:
     
     def ingest_race(self, year, grand_prix):
         """Ingest all data for a race"""
-        
+        print(f"🏁 Ingesting {year} {grand_prix}...")
