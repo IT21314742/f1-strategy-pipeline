@@ -5,3 +5,5 @@ from psycopg2.extras import execute_values
 from datetime import datetime
 import os
 
+# Enable cache
+ff1.Cache.enable_cache('f1_cache')
