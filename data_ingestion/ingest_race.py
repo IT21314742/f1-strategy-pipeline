@@ -73,5 +73,5 @@ class F1DataPipeline:
                             RETURNING race_id
                             """, (season_id, race.event['RoundNumber'],
                                   race.event['EventName'], race.event['Location'],
-                                  )
+                                  race.date)
         )
