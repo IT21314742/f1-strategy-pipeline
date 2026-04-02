@@ -66,4 +66,4 @@ class F1DataPipeline:
         race = ff1.get_session(year, grand_prix, 'R')
         race.load()
         
-        
+        # Insert race
