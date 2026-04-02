@@ -15,4 +15,5 @@ class F1DataPipeline:
             port=5432,
             database="f1_analyst",
             user="f1_analyst",
+            password="f1_strategy_2025"
         )
