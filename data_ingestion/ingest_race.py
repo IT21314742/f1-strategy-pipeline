@@ -41,4 +41,4 @@ class F1DataPipeline:
     
     def ensure_team_exists(self, team_name):
         """Insert team if not exists"""
-        team_id = team_name.replace(" ","_")
+        team_id = team_name.replace(" ","_").upper()[:10]
