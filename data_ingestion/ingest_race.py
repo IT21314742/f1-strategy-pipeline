@@ -86,4 +86,6 @@ class F1DataPipeline:
             race_id = race_id_result[0]
         else:
             # Race exists, get its ID
-            
+            self.cursor.execute(
+                "SELECT race_id, FROM races WHERE season_id = %s"
+            )
