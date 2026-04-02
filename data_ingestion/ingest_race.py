@@ -94,4 +94,4 @@ class F1DataPipeline:
             
         # Process drivers and results
         for driver_code in race.drivers:
-            
+            driver_info = race.get_driver()
