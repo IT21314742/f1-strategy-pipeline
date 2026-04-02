@@ -52,4 +52,5 @@ class F1DataPipeline:
                 "INSERT INTO teams (team_id, team_name) VALUES (%s, %s)",
                 (team_id, team_name)
             )
+            self.conn.commit()
             
