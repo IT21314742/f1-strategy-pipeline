@@ -40,3 +40,4 @@ class F1DataPipeline:
         return result[0]
     
     def ensure_team_exists(self, team_name):
+        """Insert team if not exists"""
