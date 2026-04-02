@@ -47,3 +47,5 @@ class F1DataPipeline:
             "SELECT team_id FROM teams WHERE team_id = %s",
             (team_id,)
         )
+        if not self.cursor.fetchone():
+            
