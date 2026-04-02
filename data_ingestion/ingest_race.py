@@ -48,4 +48,6 @@ class F1DataPipeline:
             (team_id,)
         )
         if not self.cursor.fetchone():
-            
+            self.cursor.execute(
+                
+            )
