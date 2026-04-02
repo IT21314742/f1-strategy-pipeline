@@ -85,4 +85,5 @@ class F1DataPipeline:
         if race_id_result:
             race_id = race_id_result[0]
         else:
-            #
+            # Race exists, get its ID
+            
