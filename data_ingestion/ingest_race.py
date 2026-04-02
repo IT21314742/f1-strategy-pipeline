@@ -80,3 +80,5 @@ class F1DataPipeline:
                 race.date,
             ),
         )
+        
+        race_id_result = 
