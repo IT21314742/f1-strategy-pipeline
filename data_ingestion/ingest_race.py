@@ -88,4 +88,5 @@ class F1DataPipeline:
             # Race exists, get its ID
             self.cursor.execute(
                 "SELECT race_id, FROM races WHERE season_id = %s AND round_number = %s",
+                
             )
