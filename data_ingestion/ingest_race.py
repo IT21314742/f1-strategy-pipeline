@@ -24,5 +24,6 @@ class F1DataPipeline:
         Check if season exists in database, insert if not
         """
         self.cursor.execute(
-            
+            "SELECT season_id FROM seasons WHERE year = %s"
+            (year,)
         )
