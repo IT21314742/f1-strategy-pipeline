@@ -44,5 +44,5 @@ class F1DataPipeline:
         team_id = team_name.replace(" ","_").upper()[:10]
         
         self.cursor.execute(
-            
+            "SELECT team_id FROM teams WHERE team_id = %s",
         )
