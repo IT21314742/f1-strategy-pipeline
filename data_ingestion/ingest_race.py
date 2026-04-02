@@ -53,4 +53,4 @@ class F1DataPipeline:
                 (team_id, team_name)
             )
             self.conn.commit()
-            
+        return team_id
