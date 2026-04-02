@@ -60,4 +60,4 @@ class F1DataPipeline:
         print(f"🏁 Ingesting {year} {grand_prix}...")
         
         # Get season ID
-        season_id = self
+        season_id = self.ensure_season_exists(year)
