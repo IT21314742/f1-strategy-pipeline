@@ -68,4 +68,5 @@ class F1DataPipeline:
         
         # Insert race
         self.cursor.execute("""
-                            INSERT INTO races (season_id, round_number, race_name, circuit_name,)""")
+                            INSERT INTO races (season_id, round_number, race_name, circuit_name, race_date)
+                            """)
