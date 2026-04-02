@@ -39,4 +39,4 @@ class F1DataPipeline:
             return year
         return result[0]
     
-    
+    def ensure_team_exists(self, team_name):
