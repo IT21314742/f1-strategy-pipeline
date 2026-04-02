@@ -63,4 +63,5 @@ class F1DataPipeline:
         season_id = self.ensure_season_exists(year)
         
         # Load race session
+        race = ff1.get_session(year, grand_prix, 'R')
         
