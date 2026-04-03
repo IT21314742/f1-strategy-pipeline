@@ -104,5 +104,6 @@ class F1DataPipeline:
                 """
                                 INSERT INTO drivers (driver_id, driver_name, team_id, driver_number)
                                 VALUES (%s, %s, %s, %s)
+                                ON CONFLICT
                                 """
             )
