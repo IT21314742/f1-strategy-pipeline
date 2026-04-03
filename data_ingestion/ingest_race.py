@@ -101,4 +101,4 @@ class F1DataPipeline:
             
             # Insert Driver
             self.cursor.execute("""
-                                INSERT INTO drivers (driver_id, driver_name, team_id,)""")
+                                INSERT INTO drivers (driver_id, driver_name, team_id, )""")
