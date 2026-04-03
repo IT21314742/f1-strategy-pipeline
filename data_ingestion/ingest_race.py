@@ -80,7 +80,7 @@ class F1DataPipeline:
                 race.date,
             ),
         )
-        
+
         race_id_result = self.cursor.fetchone()
         if race_id_result:
             race_id = race_id_result[0]
@@ -88,18 +88,20 @@ class F1DataPipeline:
             # Race exists, get its ID
             self.cursor.execute(
                 "SELECT race_id, FROM races WHERE season_id = %s AND round_number = %s",
-                (season_id, race.event['RoundNumber'])
+                (season_id, race.event["RoundNumber"]),
             )
             race_id = self.cursor.fetchone()[0]
-            
+
         # Process drivers and results
         for driver_code in race.drivers:
             driver_info = race.get_driver(driver_code)
-            
+
             # Ensure team exists
-            team_id = self.ensure_team_exists(driver_info['TeamName'])
-            
+            team_id = self.ensure_team_exists(driver_info["TeamName"])
+
             # Insert Driver
-            self.cursor.execute("""
+            self.cursor.execute(
+                """
                                 INSERT INTO drivers (driver_id, driver_name, team_id, driver_number)
-                                """)
+                                """
+            )
