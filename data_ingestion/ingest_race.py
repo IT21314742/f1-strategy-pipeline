@@ -103,6 +103,6 @@ class F1DataPipeline:
             self.cursor.execute(
                 """
                                 INSERT INTO drivers (driver_id, driver_name, team_id, driver_number)
-                                VALUES
+                                VALUES (%s, %s, %s, %s)
                                 """
             )
