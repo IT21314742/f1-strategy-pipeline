@@ -101,4 +101,4 @@ class F1DataPipeline:
             
             # Insert Driver
             self.cursor.execute("""
-                                """)
+                                INSERT INTO drivers""")
