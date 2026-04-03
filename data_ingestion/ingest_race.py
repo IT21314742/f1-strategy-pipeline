@@ -97,4 +97,4 @@ class F1DataPipeline:
             driver_info = race.get_driver(driver_code)
             
             # Ensure team exists
-            team_id = self.ensure_team_exists(driver_info)
+            team_id = self.ensure_team_exists(driver_info['TeamName'])
