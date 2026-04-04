@@ -213,4 +213,4 @@ class F1DataPipeline:
             print(f"✅ Completed {year} {grand_prix}")
         
         def close(self):
-            
+            self.cursor.close()
