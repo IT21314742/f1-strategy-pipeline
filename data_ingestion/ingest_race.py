@@ -140,5 +140,5 @@ class F1DataPipeline:
                 race_id,
                 lap['Driver'],
                 lap['LapNumber'],
-                
+                lap['LapTime']
             ))
