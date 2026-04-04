@@ -117,3 +117,4 @@ class F1DataPipeline:
             
             # Get Race Results
             result = race.results[race.results['Abbreviation'] == driver_code]
+            if not result.empty:
