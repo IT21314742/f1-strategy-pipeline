@@ -201,3 +201,4 @@ class F1DataPipeline:
                     len(current_stint),
                     sum(1['LapTime'].total_seconds() for 1 in current_stint if 1 ['LapTime']) / len(current_stint)
                 ))
+                
