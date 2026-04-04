@@ -192,3 +192,5 @@ class F1DataPipeline:
                 current_compound = compound
             
             # Last stint
+            if current_stint:
+                
