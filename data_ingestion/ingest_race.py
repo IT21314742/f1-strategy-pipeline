@@ -198,4 +198,5 @@ class F1DataPipeline:
                     current_stint[0]['LapNumber'],
                     current_stint[-1]['LapNumber'],
                     current_compound,
+                    len(current_stint),
                 ))
