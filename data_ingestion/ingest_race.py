@@ -176,4 +176,6 @@ class F1DataPipeline:
                 compound = lap.get('compound')
                 if compound != current_compound and current_stint:
                     # Stint ended
-                    
+                    stints_data.append((
+                        
+                    ))
