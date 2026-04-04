@@ -177,5 +177,6 @@ class F1DataPipeline:
                 if compound != current_compound and current_stint:
                     # Stint ended
                     stints_data.append((
-                        race_id, driver
+                        race_id, driver, stints_num,
+                        
                     ))
