@@ -203,4 +203,5 @@ class F1DataPipeline:
                 ))
         
         if stints_data:
-            execute_values()
+            execute_values(self.cursor,"""
+                           """)
