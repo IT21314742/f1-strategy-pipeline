@@ -216,4 +216,4 @@ class F1DataPipeline:
             self.cursor.close()
             self.conn.close()
     
-    #
+    # Run the pipeline
