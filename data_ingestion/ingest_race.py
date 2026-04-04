@@ -188,4 +188,4 @@ class F1DataPipeline:
                     stints_num += 1
                     current_stint = []
                 
-                
+                current_stint.append()
