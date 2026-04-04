@@ -141,5 +141,5 @@ class F1DataPipeline:
                 lap['Driver'],
                 lap['LapNumber'],
                 lap['LapTime'].total_seconds() if lap['LapTime'] else None,
-                lap['Sector1Time']
+                lap['Sector1Time'].total_seconds()
             ))
