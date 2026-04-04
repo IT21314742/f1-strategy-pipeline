@@ -147,5 +147,5 @@ class F1DataPipeline:
                 
                 lap['Position'],
                 lap.get('Compound', None),
-                
+                lap.get('TyreLife', None)
             ))
