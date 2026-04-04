@@ -150,4 +150,5 @@ class F1DataPipeline:
                 lap.get('TyreLife', None)
             ))
             
+        if lap_data:
             
