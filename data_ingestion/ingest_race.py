@@ -193,4 +193,6 @@ class F1DataPipeline:
             
             # Last stint
             if current_stint:
-                
+                stints_data.append((
+                    
+                ))
