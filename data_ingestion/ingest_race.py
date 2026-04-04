@@ -114,10 +114,17 @@ class F1DataPipeline:
                     driver_info.get("DriverNumber", 0),
                 ),
             )
-            
+
             # Get Race Results
-            result = race.results[race.results['Abbreviation'] == driver_code]
+            result = race.results[race.results["Abbreviation"] == driver_code]
             if not result.empty:
-                self.cursor.execute("""
+                self.cursor.execute(
+                    """
                                     INSERT INTO race_results (race_id, driver_id, final_position, points, status)
-                                    VALUES (%s, %s, %s, %s)""")
+                                    VALUES (%s, %s, %s, %s)
+                                    ON CONFLICT DO NOTHING""",
+                    (race_id, driver_code,
+                     int(result['Position'].iloc[0]),
+                     float(result['Points'].iloc[0]),
+                     result['Status'].iloc[0])
+                )
