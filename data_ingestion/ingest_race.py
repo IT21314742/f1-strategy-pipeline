@@ -119,4 +119,5 @@ class F1DataPipeline:
             result = race.results[race.results['Abbreviation'] == driver_code]
             if not result.empty:
                 self.cursor.execute("""
-                                    INSERT INTO race_results (race_id, driver_id, final_position, points, status)""")
+                                    INSERT INTO race_results (race_id, driver_id, final_position, points, status)
+                                    VALUES (%s, %s, %s, %s)""")
