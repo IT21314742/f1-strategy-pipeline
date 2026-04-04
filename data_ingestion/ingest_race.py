@@ -196,5 +196,5 @@ class F1DataPipeline:
                 stints_data.append((
                     race_id, driver, stints_num,
                     current_stint[0]['LapNumber'],
-                    
+                    current_stint[-1]['LapNumber'],
                 ))
