@@ -107,5 +107,6 @@ class F1DataPipeline:
                                 ON CONFLICT (driver_id) DO UPDATE
                                 SET team_id = EXCLUDED.team_id
                                 """,
-                                (driver_code, driver_info['Fullname'], team_id)
+                                (driver_code, driver_info['Fullname'], team_id,
+                                 driver_info.get('DriverNumber', 0))
             )
