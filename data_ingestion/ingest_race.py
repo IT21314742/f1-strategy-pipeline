@@ -175,3 +175,5 @@ class F1DataPipeline:
             for _, lap in driver_laps.iterrows():
                 compound = lap.get('compound')
                 if compound != current_compound and current_stint:
+                    # Stint ended
+                    
