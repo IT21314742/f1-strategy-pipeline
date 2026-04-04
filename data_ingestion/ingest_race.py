@@ -209,4 +209,4 @@ class F1DataPipeline:
                            """,
                            stints_data)
             
-            
+            self.conn.commit()
