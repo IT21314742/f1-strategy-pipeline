@@ -164,3 +164,4 @@ class F1DataPipeline:
         # Process Stints
         stints_data = []
         for driver in race.drivers:
+            driver_laps = race.laps
