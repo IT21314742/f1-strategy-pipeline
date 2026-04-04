@@ -190,3 +190,5 @@ class F1DataPipeline:
                 
                 current_stint.append(lap)
                 current_compound = compound
+            
+            
