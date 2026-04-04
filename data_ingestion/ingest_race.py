@@ -194,5 +194,6 @@ class F1DataPipeline:
             # Last stint
             if current_stint:
                 stints_data.append((
+                    race_id, driver, stints_num,
                     
                 ))
