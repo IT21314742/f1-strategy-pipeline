@@ -172,4 +172,5 @@ class F1DataPipeline:
             current_stint = []
             current_compound = None
             
-            
+            for _, lap in driver_laps.iterrows():
+                
