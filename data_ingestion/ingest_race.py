@@ -204,4 +204,4 @@ class F1DataPipeline:
         
         if stints_data:
             execute_values(self.cursor,"""
-                           INSERT INTO stints (race_id, driver_id, )""")
+                           INSERT INTO stints (race_id, driver_id, stint_number,)""")
