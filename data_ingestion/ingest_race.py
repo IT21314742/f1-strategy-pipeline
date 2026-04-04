@@ -123,8 +123,11 @@ class F1DataPipeline:
                                     INSERT INTO race_results (race_id, driver_id, final_position, points, status)
                                     VALUES (%s, %s, %s, %s)
                                     ON CONFLICT DO NOTHING""",
-                    (race_id, driver_code,
-                     int(result['Position'].iloc[0]),
-                     float(result['Points'].iloc[0]),
-                     result['Status'].iloc[0])
+                    (
+                        race_id,
+                        driver_code,
+                        int(result["Position"].iloc[0]),
+                        float(result["Points"].iloc[0]),
+                        result["Status"].iloc[0],
+                    ),
                 )
