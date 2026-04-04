@@ -131,3 +131,6 @@ class F1DataPipeline:
                         result["Status"].iloc[0],
                     ),
                 )
+
+        # Process Lap Times
+        
