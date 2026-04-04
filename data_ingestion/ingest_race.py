@@ -136,22 +136,27 @@ class F1DataPipeline:
         laps = race.laps
         lap_data = []
         for _, lap in laps.iterrows():
-            lap_data.append((
-                race_id,
-                lap['Driver'],
-                lap['LapNumber'],
-                lap['LapTime'].total_seconds() if lap['LapTime'] else None,
-                lap['Sector1Time'].total_seconds() if lap['Sector1Time'] else None,
-                lap['Sector2Time'].total_seconds() if lap['Sector2Time'] else None,
-                lap['Sector3Time'].total_seconds() if lap['Sector3Time'] else None,
-                
-                lap['Position'],
-                lap.get('Compound', None),
-                lap.get('TyreLife', None)
-            ))
-            
+            lap_data.append(
+                (
+                    race_id,
+                    lap["Driver"],
+                    lap["LapNumber"],
+                    lap["LapTime"].total_seconds() if lap["LapTime"] else None,
+                    lap["Sector1Time"].total_seconds() if lap["Sector1Time"] else None,
+                    lap["Sector2Time"].total_seconds() if lap["Sector2Time"] else None,
+                    lap["Sector3Time"].total_seconds() if lap["Sector3Time"] else None,
+                    lap["Position"],
+                    lap.get("Compound", None),
+                    lap.get("TyreLife", None),
+                )
+            )
+
         if lap_data:
-            execute_values(self.cursor, """
+            execute_values(
+                self.cursor,
+                """
                            INSERT INTO lap_times (race_id, driver_id, lap_number, lap_time, sector1_time, sector2_time, sector3_time, position, tire_compound, tire_life)
                            VALUES %s
-                           """, lap_data)
+                           """,
+                lap_data,
+            )
