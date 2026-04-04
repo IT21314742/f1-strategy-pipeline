@@ -197,4 +197,5 @@ class F1DataPipeline:
                     race_id, driver, stints_num,
                     current_stint[0]['LapNumber'],
                     current_stint[-1]['LapNumber'],
+                    current_compound,
                 ))
