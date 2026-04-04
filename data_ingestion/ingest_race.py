@@ -210,4 +210,4 @@ class F1DataPipeline:
                            stints_data)
             
             self.conn.commit()
-            print(f"✅")
+            print(f"✅ Completed {year} {grand_prix}")
