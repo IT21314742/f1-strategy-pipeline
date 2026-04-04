@@ -166,3 +166,4 @@ class F1DataPipeline:
         for driver in race.drivers:
             driver_laps = race.laps.pick_driver(driver)
             if driver_laps.empty:
+                continue
