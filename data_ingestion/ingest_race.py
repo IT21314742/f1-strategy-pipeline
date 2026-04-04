@@ -215,3 +215,5 @@ class F1DataPipeline:
         def close(self):
             self.cursor.close()
             self.conn.close()
+    
+    #
