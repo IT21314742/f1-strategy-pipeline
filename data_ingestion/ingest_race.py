@@ -139,5 +139,6 @@ class F1DataPipeline:
             lap_data.append((
                 race_id,
                 lap['Driver'],
+                lap['LapNumber'],
                 
             ))
