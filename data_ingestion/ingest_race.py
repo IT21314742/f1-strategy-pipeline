@@ -173,4 +173,5 @@ class F1DataPipeline:
             current_compound = None
             
             for _, lap in driver_laps.iterrows():
-                compound = lap.get()
+                compound = lap.get('compound')
+                if compound !=
