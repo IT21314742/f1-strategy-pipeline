@@ -203,4 +203,4 @@ class F1DataPipeline:
                 ))
         
         if stints_data:
-            
+            execute_values()
