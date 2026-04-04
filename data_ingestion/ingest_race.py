@@ -168,4 +168,5 @@ class F1DataPipeline:
             if driver_laps.empty:
                 continue
             
-            
+            stints_num = 1
+            current_stint = []
