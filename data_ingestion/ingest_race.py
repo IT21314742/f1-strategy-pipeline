@@ -134,4 +134,6 @@ class F1DataPipeline:
 
         # Process Lap Times
         laps = race.laps
-        
+        lap_data = []
+        for _, lap in laps.iterrows():
+            
