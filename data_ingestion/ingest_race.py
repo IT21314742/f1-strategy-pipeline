@@ -208,3 +208,5 @@ class F1DataPipeline:
                            VALUES %s
                            """,
                            stints_data)
+            
+            
