@@ -145,4 +145,5 @@ class F1DataPipeline:
                 lap['Sector2Time'].total_seconds() if lap['Sector2Time'] else None,
                 lap['Sector3Time'].total_seconds() if lap['Sector3Time'] else None,
                 
+                
             ))
