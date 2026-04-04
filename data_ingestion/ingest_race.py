@@ -133,4 +133,5 @@ class F1DataPipeline:
                 )
 
         # Process Lap Times
+        laps = race.laps
         
