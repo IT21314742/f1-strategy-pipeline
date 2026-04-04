@@ -151,4 +151,5 @@ class F1DataPipeline:
             ))
             
         if lap_data:
-            
+            execute_values(self.cursor, """
+                           """)
