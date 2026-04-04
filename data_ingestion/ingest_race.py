@@ -116,4 +116,4 @@ class F1DataPipeline:
             )
             
             # Get Race Results
-            
+            result = race.results[race.results['Abbreviation']]
