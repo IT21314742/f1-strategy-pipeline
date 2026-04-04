@@ -211,3 +211,4 @@ class F1DataPipeline:
             
             self.conn.commit()
             print(f"✅ Completed {year} {grand_prix}")
+        
