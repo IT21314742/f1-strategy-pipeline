@@ -224,4 +224,7 @@ class F1DataPipeline:
         #Ingest 2025 Monaco as a test
         pipeline.ingest_race(2025, "monaco")
         
-        
+        #Optional: ingest more races
+        #races_to_ingest = [
+        #   (2025, Silverstone)   
+        ]
