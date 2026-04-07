@@ -218,4 +218,5 @@ class F1DataPipeline:
     
     # Run the pipeline
     if __name__ == "__main__":
+        pipeline = F1DataPipeline()
         
