@@ -232,3 +232,5 @@ class F1DataPipeline:
         #]
         # for year, gp in races_to_ingest:
         #   pipeline.ingest_race(year, gp)
+        
+        pipeline.close()
