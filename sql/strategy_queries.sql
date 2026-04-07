@@ -12,4 +12,4 @@ GROUP BY r.race_name, d.driver_name, s.tire_compound
 ORDER BY avg_stint_length ASC
 LIMIT 10;
 
---2. Undercut effectiveness: 
+--2. Undercut effectiveness: Driver who gained positions after pit stops
