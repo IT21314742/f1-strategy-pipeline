@@ -228,5 +228,6 @@ class F1DataPipeline:
         #races_to_ingest = [
         #   (2025, 'Silverstone')
         #   (2025, 'Suzuka')   
-        #   ()
-        ]
+        #   (2025, 'Bahrain')
+        #]
+        
