@@ -13,3 +13,9 @@ ORDER BY avg_stint_length ASC
 LIMIT 10;
 
 --2. Undercut effectiveness: Driver who gained positions after pit stops
+WITH pit_stop_analysis AS (
+    SELECT
+        driver_id,
+        race_id,
+        lap_number,
+)
