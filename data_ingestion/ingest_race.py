@@ -234,3 +234,4 @@ class F1DataPipeline:
         #   pipeline.ingest_race(year, gp)
         
         pipeline.close()
+        
