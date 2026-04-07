@@ -29,3 +29,4 @@ d.driver_name
 COUNT(*) AS pit_stops_analyzed,
 AVG(prev_position -  position) AS avg_positions_gained
 FROM pit_stop_analysis p
+JOIN races r ON p.race_id=r.race_id
