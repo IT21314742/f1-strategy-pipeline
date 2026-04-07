@@ -18,4 +18,5 @@ WITH pit_stop_analysis AS (
         driver_id,
         race_id,
         lap_number,
+        position
 )
