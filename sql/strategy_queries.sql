@@ -26,3 +26,4 @@ WITH pit_stop_analysis AS (
 SELECT 
 r.race_name
 d.driver_name
+COUNT(*) AS pit_stops_analyzed,
