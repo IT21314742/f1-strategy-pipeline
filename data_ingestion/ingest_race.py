@@ -230,4 +230,5 @@ class F1DataPipeline:
         #   (2025, 'Suzuka')   
         #   (2025, 'Bahrain')
         #]
-        
+        # for year, gp in races_to_ingest:
+        #   pipeline.ingest_race(year, gp)
