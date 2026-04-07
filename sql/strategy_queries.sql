@@ -23,3 +23,6 @@ WITH pit_stop_analysis AS (
         FROM lap_times
         WHERE lap_times IS NOT NULL
 )
+SELECT 
+r.race_name
+d.driver_name
