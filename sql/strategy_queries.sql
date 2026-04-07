@@ -27,3 +27,5 @@ SELECT
 r.race_name
 d.driver_name
 COUNT(*) AS pit_stops_analyzed,
+AVG(prev_position -  position) AS avg_positions_gained
+FROM 
