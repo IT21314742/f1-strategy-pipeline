@@ -226,5 +226,6 @@ class F1DataPipeline:
         
         #Optional: ingest more races
         #races_to_ingest = [
-        #   (2025, Silverstone)   
+        #   (2025, Silverstone)
+        #   (2025, '')   
         ]
