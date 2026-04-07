@@ -217,3 +217,5 @@ class F1DataPipeline:
             self.conn.close()
     
     # Run the pipeline
+    if __name__ == "__main__":
+        
