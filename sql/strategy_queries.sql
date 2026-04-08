@@ -39,3 +39,9 @@ LIMIT 20;
 
 
 ---3. Qualifying vs Race performance
+SELECT
+    d.driver_name,
+    t.team_name,
+    AVG(q.grid_position) as avg_qualifying,
+    AVG(r.final_position) as avg_race_finish,
+    AVG(q.grid_position - r.final_position) as avg_positions_gained
