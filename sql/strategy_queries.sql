@@ -73,3 +73,6 @@ ORDER BY avg_lap_time;
 SELECT
     r.race_name,
     d.driver_name,
+    COUNT(*) as position_changes,
+    MIN(lap_time) as fastest_lap
+    
