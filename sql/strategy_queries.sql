@@ -34,3 +34,5 @@ JOIN drivers d ON p.driver_id = d.driver_id
 WHERE prev_position > position -- gained Positions
 GROUP BY r.race_name, d.driver_name
 HAVING COUNT(*) > 1
+ORDER BY avg_positions_gained DESC
+LIMIT 20;
