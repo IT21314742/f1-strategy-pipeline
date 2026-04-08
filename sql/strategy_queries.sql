@@ -39,16 +39,17 @@ LIMIT 20;
 
 
 ---3. Qualifying vs Race performance
-SELECT
+SELECT 
     d.driver_name,
     t.team_name,
     AVG(q.grid_position) as avg_qualifying,
     AVG(r.final_position) as avg_race_finish,
     AVG(q.grid_position - r.final_position) as avg_positions_gained
 FROM qualifying_results q
-JOIN rese_results r ON q.race_id = r.race_id AND q.driver_id = r.race_id
+JOIN race_results r ON q.race_id = r.race_id AND q.driver_id = r.driver_id
 JOIN drivers d ON q.driver_id = d.driver_id
 JOIN teams t ON d.team_id = t.team_id
+WHERE r.final_position IS NOT NULL
 GROUP BY d.driver_name, t.team_name
-HAVING COUNT(*) >=5
+HAVING COUNT(*) >= 5
 ORDER BY avg_positions_gained DESC;
