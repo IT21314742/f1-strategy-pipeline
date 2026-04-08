@@ -13,5 +13,8 @@ conn = psycopg2.connect(
 
 # Run each query and export to csv
 queries = {
-    "tire_strategies": """"""
+    "tire_strategies": """
+    r.race_name,
+    
+    """
 }
