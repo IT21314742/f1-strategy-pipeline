@@ -36,3 +36,6 @@ GROUP BY r.race_name, d.driver_name
 HAVING COUNT(*) > 1
 ORDER BY avg_positions_gained DESC
 LIMIT 20;
+
+
+---3. Qualifying vs Race performance
