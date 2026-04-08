@@ -49,3 +49,5 @@ FROM qualifying_results q
 JOIN rese_results r ON q.race_id = r.race_id AND q.driver_id = r.race_id
 JOIN drivers d ON q.driver_id = d.driver_id
 JOIN teams t ON d.team_id = t.team_id
+GROUP BY d.driver_name, t.team_name
+HAVING COUNT(*) >=5
