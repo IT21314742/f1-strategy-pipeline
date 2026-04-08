@@ -65,3 +65,5 @@ SELECT
 FROM lap_times
 WHERE lap_time IS NOT NULL
     AND tire_compound IS NOT NULL
+GROUP BY tire_compound
+ORDER BY avg_lap_time;
