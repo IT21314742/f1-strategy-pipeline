@@ -17,5 +17,7 @@ queries = {
     r.race_name,
     d.driver_name,
     s.tire_compound,
+    AVG(s.stint_length) as avg_stint_length
+
     """
 }
