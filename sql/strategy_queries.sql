@@ -53,3 +53,7 @@ WHERE r.final_position IS NOT NULL
 GROUP BY d.driver_name, t.team_name
 HAVING COUNT(*) >= 5
 ORDER BY avg_positions_gained DESC;
+
+
+
+---4. Tire compound performance comparison
