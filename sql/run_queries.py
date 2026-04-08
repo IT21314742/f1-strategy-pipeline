@@ -9,3 +9,5 @@ conn = psycopg2.connect(
     user="f1_analyst",
     password="f1_strategy_2025"
 )
+
+
