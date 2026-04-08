@@ -57,3 +57,7 @@ ORDER BY avg_positions_gained DESC;
 
 
 ---4. Tire compound performance comparison
+SELECT
+    tire_compound,
+    COUNT(*) as lap_count
+    AVG(lap_time) as avg_lap_time
