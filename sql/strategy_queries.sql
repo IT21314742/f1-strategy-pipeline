@@ -79,3 +79,4 @@ FROM lap_times 1
 JOIN races r ON 1.race_id = r.race_id
 JOIN drivers d ON 1.driver_id = d.driver_id
 WHERE 1.position != LAG(1.position) OVER (PARTITION BY 1.driver_id, 1.race_id ORDER BY 1.lap_number)
+GROUP BY r.race_name, d.driver_name
