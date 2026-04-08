@@ -21,6 +21,7 @@ queries = {
 FROM stints s
 JOIN races r ON s.race_id = r.race_id
 JOIN drivers d ON s.driver_id = d.driver_id
+WHERE r.season_id = 2023
 WHERE r.race_name, 
     """
 }
