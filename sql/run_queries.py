@@ -15,6 +15,7 @@ conn = psycopg2.connect(
 queries = {
     "tire_strategies": """
     r.race_name,
-    
+    d.driver_name,
+    s.tire_compound,
     """
 }
