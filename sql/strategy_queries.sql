@@ -14,24 +14,24 @@ LIMIT 10;
 
 --2. Undercut effectiveness: Driver who gained positions after pit stops
 WITH pit_stop_analysis AS (
-    SELECT
+    SELECT 
         driver_id,
         race_id,
         lap_number,
         position,
-        LAG(position) OVER (PARTITION BY driver_id, race_id ORDER BY lap_number) AS prev_position
-        FROM lap_times
-        WHERE lap_times IS NOT NULL
+        LAG(position) OVER (PARTITION BY driver_id, race_id ORDER BY lap_number) as prev_position
+    FROM lap_times
+    WHERE lap_time IS NOT NULL
 )
 SELECT 
-r.race_name
-d.driver_name
-COUNT(*) AS pit_stops_analyzed,
-AVG(prev_position -  position) AS avg_positions_gained
+    r.race_name,
+    d.driver_name,
+    COUNT(*) as pit_stops_analyzed,
+    AVG(prev_position - position) as avg_positions_gained
 FROM pit_stop_analysis p
 JOIN races r ON p.race_id = r.race_id
 JOIN drivers d ON p.driver_id = d.driver_id
-WHERE prev_position > position -- gained Positions
+WHERE prev_position > position  -- Gained positions
 GROUP BY r.race_name, d.driver_name
 HAVING COUNT(*) > 1
 ORDER BY avg_positions_gained DESC
