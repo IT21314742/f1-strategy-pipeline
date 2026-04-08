@@ -46,3 +46,4 @@ SELECT
     AVG(r.final_position) as avg_race_finish,
     AVG(q.grid_position - r.final_position) as avg_positions_gained
 FROM qualifying_results q
+JOIN rese_results r ON q.race_id = r.race_id AND q.driver_id = r.race_id
