@@ -64,3 +64,4 @@ SELECT
     STDDEV(lap_time) as lap_time_consistency
 FROM lap_times
 WHERE lap_time IS NOT NULL
+    AND tire_compound IS NOT NULL
