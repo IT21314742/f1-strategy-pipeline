@@ -32,3 +32,5 @@ FROM pit_stop_analysis p
 JOIN races r ON p.race_id = r.race_id
 JOIN drivers d ON p.driver_id = d.driver_id
 WHERE prev_position > position -- gained Positions
+GROUP BY r.race_name, d.driver_name
+HAVING COUNT(*) > 1
