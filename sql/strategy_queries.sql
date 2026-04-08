@@ -75,4 +75,5 @@ SELECT
     d.driver_name,
     COUNT(*) as position_changes,
     MIN(lap_time) as fastest_lap
-    
+FROM lap_times 1
+JOIN races r ON 1.race_id = r.race_id
