@@ -51,3 +51,4 @@ JOIN drivers d ON q.driver_id = d.driver_id
 JOIN teams t ON d.team_id = t.team_id
 GROUP BY d.driver_name, t.team_name
 HAVING COUNT(*) >=5
+ORDER BY avg_positions_gained DESC;
