@@ -61,3 +61,6 @@ SELECT
     tire_compound,
     COUNT(*) as lap_count
     AVG(lap_time) as avg_lap_time
+    STDDEV(lap_time) as lap_time_consistency
+FROM lap_times
+WHERE lap_time IS NOT NULL
