@@ -35,6 +35,9 @@ WITH pit_stop_analysis AS (
     position,
     LAG(position) OVER (PARTITION BY driver_id, race_id ORDER BY lap_number) as prev_position FROM lap_times
     )
+    SELECT
+    d.driver_name,
+    AVG(prev_position - position) as avg_position_gained
     """
 
 }
