@@ -10,5 +10,5 @@ from datetime import datetime
 st.set_page_config(
     page_title="F1 Strategy Dashboard",
     page_icon="🏎️",
-    
+    layout="wide"
 )
