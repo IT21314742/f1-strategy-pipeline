@@ -33,7 +33,8 @@ WITH pit_stop_analysis AS (
     race_id,
     lap_number,
     position,
-    LAG(position) OVER (PARTITION BY driver_id, race_id ORDER BY lap_number) as prev_position
-    )"""
+    LAG(position) OVER (PARTITION BY driver_id, race_id ORDER BY lap_number) as prev_position FROM lap_times
+    )
+    """
 
 }
