@@ -48,3 +48,4 @@ WITH pit_stop_analysis AS (
     """
 }
 for name, query in queries.items():
+    df = pd.read_sql(query, conn)
