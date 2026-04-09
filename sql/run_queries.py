@@ -47,3 +47,4 @@ WITH pit_stop_analysis AS (
     LIMIT 10
     """
 }
+
