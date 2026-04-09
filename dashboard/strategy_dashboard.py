@@ -18,5 +18,6 @@ st.set_page_config(
 def init_connection():
     return psycopg2.connect(
         host="locahost",
+        port=5432,
         
     )
