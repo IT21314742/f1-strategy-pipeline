@@ -29,4 +29,5 @@ conn = init_connection()
 
 @st.cache_data(ttl=3600)
 def load_races():
-    
+    return pd.read_sql("""
+                       """)
