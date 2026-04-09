@@ -42,6 +42,7 @@ WITH pit_stop_analysis AS (
     JOIN drivers d ON p.driver_id = d.driver_id
     WHERE prev_position > position
     GROUP BY d.driver_name
-    HAVING COUNT(*) > 5"""
+    HAVING COUNT(*) > 5
+    ORDER BY avg_position_gained DESC"""
 
 }
