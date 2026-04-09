@@ -16,4 +16,4 @@ st.set_page_config(
 # Database Connection
 @st.cache_resource
 def init_connection():
-    
+    return psycopg2.connect()
