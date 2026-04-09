@@ -34,3 +34,5 @@ def load_races():
         FROM races
         ORDER BY race_date DESC
         """, conn)
+    
+    
