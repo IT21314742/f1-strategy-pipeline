@@ -38,6 +38,6 @@ WITH pit_stop_analysis AS (
     SELECT
     d.driver_name,
     AVG(prev_position - position) as avg_position_gained
-    """
+    FROM pit_stop_analysis p"""
 
 }
