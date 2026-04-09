@@ -36,3 +36,4 @@ def load_races():
         """, conn)
     
     
+@st.cache_data(ttl=3600)
