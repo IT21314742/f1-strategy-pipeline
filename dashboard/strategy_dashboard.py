@@ -39,4 +39,4 @@ def load_races():
 @st.cache_data(ttl=3600)
 def load_stints(race_id):
     return pd.read_sql(f"""
-                       """)
+        """)
