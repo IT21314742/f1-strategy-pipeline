@@ -27,3 +27,4 @@ def init_connection():
 conn = init_connection()
 
 
+@st.cache_data(ttl=3600)
