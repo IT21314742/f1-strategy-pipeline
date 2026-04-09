@@ -7,3 +7,4 @@ from datetime import datetime
 
 
 # Page Config
+st.set_page_config
