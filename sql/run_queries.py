@@ -28,6 +28,9 @@ LIMIT 20
     """,
 "Undercut_masters":"""
 WITH pit_stop_analysis AS (
+    SELECT
+    driver_id,
+    race_id,
     )"""
 
 }
