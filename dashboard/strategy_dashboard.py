@@ -9,4 +9,6 @@ from datetime import datetime
 # Page Config
 st.set_page_config(
     page_title="F1 Strategy Dashboard",
+    page_icon="🏎️",
+    
 )
