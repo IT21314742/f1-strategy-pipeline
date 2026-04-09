@@ -27,6 +27,7 @@ ORDER BY avg_stint_length ASC
 LIMIT 20
     """,
 "Undercut_masters":"""
-"""
+WITH pit_stop_analysis AS (
+    )"""
 
 }
