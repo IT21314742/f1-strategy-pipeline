@@ -14,3 +14,4 @@ st.set_page_config(
 )
 
 # Database Connection
+@st.cache_resource
