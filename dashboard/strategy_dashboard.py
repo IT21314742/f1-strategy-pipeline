@@ -30,4 +30,6 @@ conn = init_connection()
 @st.cache_data(ttl=3600)
 def load_races():
     return pd.read_sql("""
-                       """)
+        SELECT race_id, race_name, circuit_name, race_date
+        FROM races
+        """)
