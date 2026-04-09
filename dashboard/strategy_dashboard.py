@@ -23,3 +23,4 @@ def init_connection():
         user="f1_analyst",
         password="f1_strategy_2025"
     )
+    
