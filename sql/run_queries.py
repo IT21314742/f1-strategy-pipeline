@@ -43,6 +43,7 @@ WITH pit_stop_analysis AS (
     WHERE prev_position > position
     GROUP BY d.driver_name
     HAVING COUNT(*) > 5
-    ORDER BY avg_position_gained DESC"""
-
+    ORDER BY avg_position_gained DESC
+    LIMIT 10
+    """
 }
