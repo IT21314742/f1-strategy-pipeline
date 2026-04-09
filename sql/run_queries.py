@@ -49,4 +49,4 @@ WITH pit_stop_analysis AS (
 }
 for name, query in queries.items():
     df = pd.read_sql(query, conn)
-    df.to_csv()
+    df.to_csv(f"output_{name}.csv", index=False)
