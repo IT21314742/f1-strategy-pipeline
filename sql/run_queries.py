@@ -40,6 +40,7 @@ WITH pit_stop_analysis AS (
     AVG(prev_position - position) as avg_position_gained
     FROM pit_stop_analysis p
     JOIN drivers d ON p.driver_id = d.driver_id
-    WHERE prev_position > position"""
+    WHERE prev_position > position
+    GROUP BY d.driver_name"""
 
 }
