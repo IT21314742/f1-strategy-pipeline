@@ -47,4 +47,4 @@ WITH pit_stop_analysis AS (
     LIMIT 10
     """
 }
-
+for name, query in queries.items():
