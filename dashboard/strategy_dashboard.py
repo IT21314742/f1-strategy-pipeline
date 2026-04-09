@@ -32,4 +32,5 @@ def load_races():
     return pd.read_sql("""
         SELECT race_id, race_name, circuit_name, race_date
         FROM races
-        ORDER BY race_date DESC""")
+        ORDER BY race_date DESC
+        """, conn)
