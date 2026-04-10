@@ -7,11 +7,8 @@ from datetime import datetime
 
 
 # Page Config
-st.set_page_config(
-    page_title="F1 Strategy Dashboard",
-    page_icon="🏎️",
-    layout="wide"
-)
+st.set_page_config(page_title="F1 Strategy Dashboard", page_icon="🏎️", layout="wide")
+
 
 # Database Connection
 @st.cache_resource
@@ -21,22 +18,28 @@ def init_connection():
         port=5432,
         database="f1_strategy",
         user="f1_analyst",
-        password="f1_strategy_2025"
+        password="f1_strategy_2025",
     )
-    
+
+
 conn = init_connection()
 
 
 @st.cache_data(ttl=3600)
 def load_races():
-    return pd.read_sql("""
+    return pd.read_sql(
+        """
         SELECT race_id, race_name, circuit_name, race_date
         FROM races
         ORDER BY race_date DESC
-        """, conn)
-    
-    
+        """,
+        conn,
+    )
+
+
 @st.cache_data(ttl=3600)
 def load_stints(race_id):
-    return pd.read_sql(f"""
-        """)
+    return pd.read_sql(
+        f"""
+        """
+    )
