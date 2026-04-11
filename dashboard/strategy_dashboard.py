@@ -87,4 +87,4 @@ st.markdown(
         """
 )
 
-#SIdebar
+#Sidebar
