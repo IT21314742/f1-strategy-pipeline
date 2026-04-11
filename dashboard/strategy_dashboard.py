@@ -65,4 +65,7 @@ def load_lap_times(race_id):
             d.driver_name,
             l.lap_number,
             l.lap_time,
+            l.position,
+            l.tire_compound,
+            l.tire_life
             """)
