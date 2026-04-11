@@ -94,3 +94,5 @@ with st.sidebar:
     # Race selector
     races_df = load_races()
     selected_race = st.selectbox(
+        "Select Race",
+        
