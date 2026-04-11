@@ -63,4 +63,5 @@ def load_lap_times(race_id):
     return pd.read.sql(f"""
         SELECT
             d.driver_name,
+            l.lap_number,
             """)
