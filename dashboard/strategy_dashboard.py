@@ -80,4 +80,5 @@ def load_lap_times(race_id):
 #Title
 st.title("🏎️ F1 Strategy Analysis Dashboard")
 st.markdown("""
-        Analyze tire strategies, pit windows, and driver performance across races.""")
+        Analyze tire strategies, pit windows, and driver performance across races.
+        Built with **FastF1**, **PostgreSQL***, and **Streamlit**.""")
