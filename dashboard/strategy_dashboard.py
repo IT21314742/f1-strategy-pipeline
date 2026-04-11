@@ -87,22 +87,25 @@ st.markdown(
         """
 )
 
-#Sidebar
+# Sidebar
 with st.sidebar:
     st.header("📊 Filters")
-    
+
     # Race selector
     races_df = load_races()
     selected_race = st.selectbox(
         "Select Race",
-        races_df['race_id'].tolist(),
-        format_func=lambda x: races_df[races_df['race_id'] == x]['race_name'].iloc[0]
+        races_df["race_id"].tolist(),
+        format_func=lambda x: races_df[races_df["race_id"] == x]["race_name"].iloc[0],
     )
-    
+
     # Driver selector
     drivers_df = load_drivers()
     selected_drivers = st.multiselect(
         "Select Drivers (Optional)",
-        drivers_df['driver_id'].tolist(),
-        format_func=lambda x: drivers_df[drivers_df['driver_id'] == x]['driver_name'].iloc[0]
+        drivers_df["driver_id"].tolist(),
+        format_func=lambda x: drivers_df[drivers_df["driver_id"] == x][
+            "driver_name"
+        ].iloc[0],
     )
+    
