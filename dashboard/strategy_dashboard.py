@@ -104,5 +104,5 @@ with st.sidebar:
     selected_drivers = st.multiselect(
         "Select Drivers (Optional)",
         drivers_df['driver_id'].tolist(),
-        format_func=lambda x: drivers_df[]
+        format_func=lambda x: drivers_df[drivers_df['driver_id'] == x]['driver_name'].iloc[0]
     )
