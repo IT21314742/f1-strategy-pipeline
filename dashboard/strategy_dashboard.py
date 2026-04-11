@@ -64,4 +64,5 @@ def load_lap_times(race_id):
         SELECT
             d.driver_name,
             l.lap_number,
-            l.lap_time,""")
+            l.lap_time,
+            """)
