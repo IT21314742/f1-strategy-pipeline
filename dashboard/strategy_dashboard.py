@@ -44,6 +44,7 @@ def load_stints(race_id):
         SELECT
         d.driver_name,
         s.stint_number,
+        s.tire_compound,
         
         """
     )
