@@ -49,6 +49,8 @@ def load_stints(race_id):
             s.stint_length,
             s.avg_lap_time
         FROM stints s
+        JOIN drivers d ON s.driver_id = d.driver_id
+        
         """,
         conn,
 
