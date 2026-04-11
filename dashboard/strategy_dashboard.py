@@ -103,4 +103,5 @@ with st.sidebar:
     drivers_df = load_drivers()
     selected_drivers = st.multiselect(
         "Select Drivers (Optional)",
+        drivers_df['']
     )
