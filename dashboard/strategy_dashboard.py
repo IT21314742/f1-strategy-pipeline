@@ -98,3 +98,4 @@ with st.sidebar:
         races_df['race_id'].tolist(),
         format_func=lambda x: races_df[races_df['race_id'] == x]['race_name'].iloc[0]
     )
+    
