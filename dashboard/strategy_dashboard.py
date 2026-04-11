@@ -43,6 +43,7 @@ def load_stints(race_id):
         f"""
         SELECT
         d.driver_name,
+        s.stint_number,
         
         """
     )
