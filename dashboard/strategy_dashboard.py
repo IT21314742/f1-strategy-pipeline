@@ -89,4 +89,5 @@ st.markdown(
 
 #Sidebar
 with st.sidebar:
-    st.header
+    st.header("📊 Filters")
+    
