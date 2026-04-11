@@ -100,4 +100,4 @@ with st.sidebar:
     )
     
     # Driver selector
-    
+    drivers_df =
