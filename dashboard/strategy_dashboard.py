@@ -71,4 +71,5 @@ def load_lap_times(race_id):
         FROM lap_times l
         JOIN drivers d ON 1.driver_id = d.driver_id
         WHERE 1.race_id = {race_id}
-        """)
+        ORDER BY 1.lap_number
+        """, conn)
