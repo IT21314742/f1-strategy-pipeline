@@ -60,7 +60,8 @@ def load_stints(race_id):
 
 @st.cache_data(ttl=3600)
 def load_lap_times(race_id):
-    return pd.read.sql(f"""
+    return pd.read.sql(
+        f"""
         SELECT
             d.driver_name,
             l.lap_number,
@@ -72,4 +73,6 @@ def load_lap_times(race_id):
         JOIN drivers d ON 1.driver_id = d.driver_id
         WHERE 1.race_id = {race_id}
         ORDER BY 1.lap_number
-        """, conn)
+        """,
+        conn,
+    )
