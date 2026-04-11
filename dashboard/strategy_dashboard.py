@@ -70,4 +70,5 @@ def load_lap_times(race_id):
             l.tire_life
         FROM lap_times l
         JOIN drivers d ON 1.driver_id = d.driver_id
+        WHERE 1.race_id = {race_id}
         """)
