@@ -95,5 +95,6 @@ with st.sidebar:
     races_df = load_races()
     selected_race = st.selectbox(
         "Select Race",
-        races_df[race_id].tolist(),
-        format_func=lambda x: races_df[races_df['race_id'] == x]
+        races_df['race_id'].tolist(),
+        format_func=lambda x: races_df[races_df['race_id'] == x]['race_name'].iloc[0]
+    )
