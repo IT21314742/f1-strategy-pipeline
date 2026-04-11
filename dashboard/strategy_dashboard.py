@@ -68,4 +68,5 @@ def load_lap_times(race_id):
             l.position,
             l.tire_compound,
             l.tire_life
-            """)
+        FROM lap_times l
+        """)
