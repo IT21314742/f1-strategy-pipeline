@@ -39,12 +39,17 @@ def load_races():
 
 @st.cache_data(ttl=3600)
 def load_stints(race_id):
-    return pd.read_sql(
-        f"""
+    return pd.read_sql(f"""
         SELECT
-        d.driver_name,
-        s.stint_number,
-        s.tire_compound,
+            d.driver_name,
+            s.stint_number,
+            s.tire_compound,
+            s.start_lap,
+            s.end_lap,
+            s.stint_length,
+            s.avg_lap_time
         
-        """
+        """,
+        conn,
+
     )
