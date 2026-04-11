@@ -86,3 +86,5 @@ st.markdown(
         Built with **FastF1**, **PostgreSQL***, and **Streamlit**.
         """
 )
+
+#SIdebar
