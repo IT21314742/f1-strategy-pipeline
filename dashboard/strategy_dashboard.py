@@ -91,4 +91,5 @@ st.markdown(
 with st.sidebar:
     st.header("📊 Filters")
     
-    
+    # Race selector
+    races_df = load_races()
