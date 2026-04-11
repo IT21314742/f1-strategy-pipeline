@@ -48,7 +48,7 @@ def load_stints(race_id):
             s.end_lap,
             s.stint_length,
             s.avg_lap_time
-        
+        FROM stints s
         """,
         conn,
 
