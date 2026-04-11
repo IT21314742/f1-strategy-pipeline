@@ -110,4 +110,5 @@ with st.sidebar:
     )
     
     
+    st.markdown("---")
     
