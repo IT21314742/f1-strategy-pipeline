@@ -41,5 +41,8 @@ def load_races():
 def load_stints(race_id):
     return pd.read_sql(
         f"""
+        SELECT
+        d.driver_name,
+        
         """
     )
