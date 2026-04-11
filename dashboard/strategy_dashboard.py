@@ -96,4 +96,4 @@ with st.sidebar:
     selected_race = st.selectbox(
         "Select Race",
         races_df[race_id].tolist(),
-        format_func=lambda x: races_df
+        format_func=lambda x: races_df[races_df]
