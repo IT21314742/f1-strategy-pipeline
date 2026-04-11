@@ -56,3 +56,6 @@ def load_stints(race_id):
         """,
         conn,
     )
+
+
+@st.cache_data(ttl=3600)
