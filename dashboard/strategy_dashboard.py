@@ -111,4 +111,5 @@ with st.sidebar:
     
     
     st.markdown("---")
+    st.caption(f"Data Source: FastF1 API")
     
