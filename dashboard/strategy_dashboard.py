@@ -99,4 +99,5 @@ with st.sidebar:
         format_func=lambda x: races_df[races_df['race_id'] == x]['race_name'].iloc[0]
     )
     
+    # Driver selector
     
