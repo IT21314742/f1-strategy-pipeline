@@ -50,7 +50,8 @@ def load_stints(race_id):
             s.avg_lap_time
         FROM stints s
         JOIN drivers d ON s.driver_id = d.driver_id
-        
+        WHERE s.race_id = {race_id}
+        ORDER BY s.start_lap
         """,
         conn,
 
