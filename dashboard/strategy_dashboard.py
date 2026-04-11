@@ -95,4 +95,5 @@ with st.sidebar:
     races_df = load_races()
     selected_race = st.selectbox(
         "Select Race",
+        races_df[race_id].tolist(),
         
