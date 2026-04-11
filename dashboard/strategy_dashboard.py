@@ -59,3 +59,7 @@ def load_stints(race_id):
 
 
 @st.cache_data(ttl=3600)
+def load_lap_times(race_id):
+    return pd.read.sql(f"""
+        SELECT
+            """)
