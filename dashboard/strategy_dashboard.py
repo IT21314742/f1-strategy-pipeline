@@ -76,3 +76,8 @@ def load_lap_times(race_id):
         """,
         conn,
     )
+
+#Title
+st.title("🏎️ F1 Strategy Analysis Dashboard")
+st.markdown("""
+        """)
