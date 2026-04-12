@@ -132,4 +132,4 @@ with col1:
     #Create stint chart
     fig_stints = go.Figure()
     
-    
+    for driver in stints_df['driver_name'].unique():
