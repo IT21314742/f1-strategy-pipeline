@@ -135,3 +135,5 @@ with col1:
     for driver in stints_df['driver_name'].unique():
         driver_stints = stints_df[stints_df["driver_name"] == driver]
         
+        
+        
