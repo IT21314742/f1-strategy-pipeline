@@ -114,3 +114,5 @@ with st.sidebar:
     st.caption(f"Data Source: FastF1 API")
     st.caption(f"last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     
+    
+    
