@@ -133,3 +133,4 @@ with col1:
     fig_stints = go.Figure()
     
     for driver in stints_df['driver_name'].unique():
+        driver_stints = 
