@@ -116,3 +116,4 @@ with st.sidebar:
 
 # Load Data
 stints_df = load_stints(selected_race)
+laps_df = load_lap_times(selected_race)
