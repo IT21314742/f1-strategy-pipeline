@@ -131,3 +131,5 @@ with col1:
     
     #Create stint chart
     fig_stints = go.Figure()
+    
+    
