@@ -118,3 +118,5 @@ with st.sidebar:
 stints_df = load_stints(selected_race)
 laps_df = load_lap_times(selected_race)
 
+if selected_drivers:
+    
