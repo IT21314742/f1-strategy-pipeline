@@ -114,3 +114,5 @@ with st.sidebar:
     st.caption(f"last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
 
+# Load Data
+stints_df = load_stints(selected_race)
