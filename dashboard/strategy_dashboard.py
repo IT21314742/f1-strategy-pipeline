@@ -108,11 +108,9 @@ with st.sidebar:
             "driver_name"
         ].iloc[0],
     )
-    
-    
+
     st.markdown("---")
     st.caption(f"Data Source: FastF1 API")
     st.caption(f"last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    
-    
-    
+
+
