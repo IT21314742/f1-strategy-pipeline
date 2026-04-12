@@ -119,4 +119,5 @@ stints_df = load_stints(selected_race)
 laps_df = load_lap_times(selected_race)
 
 if selected_drivers:
+    stints_df = stints_df[stints_df['driver_name'].isin(selected_drivers)]
     
