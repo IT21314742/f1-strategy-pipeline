@@ -149,5 +149,5 @@ with col1:
                 name=f"{driver} - {stint['tire_compound']}",
                 x=[driver],
                 y=[stint['stint_length']],
-                
+                base=[stint['start_lap']],
             ))
