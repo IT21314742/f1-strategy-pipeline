@@ -148,4 +148,6 @@ with col1:
             fig_stints.add_trace(go.Bar(
                 name=f"{driver} - {stint['tire_compound']}",
                 x=[driver],
+                y=[stint['stint_length']],
+                
             ))
