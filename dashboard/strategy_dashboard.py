@@ -173,5 +173,5 @@ with col2:
     #Lap time comparison
     fig_laps = px.line(
         laps_df,
-        x=
+        x='lap_number',
     )
