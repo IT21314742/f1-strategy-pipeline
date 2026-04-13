@@ -159,4 +159,5 @@ with col1:
     
     fig_stints.update_layout(
         title="Tire Stints Strategy by Driver",
+        xaxis_title="Driver",
     )
