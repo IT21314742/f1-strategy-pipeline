@@ -162,4 +162,5 @@ with col1:
         xaxis_title="Driver",
         yaxis_title="Lap Number",
         barmode='stack',
+        height=500
     )
