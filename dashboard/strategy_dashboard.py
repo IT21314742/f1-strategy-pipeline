@@ -171,4 +171,7 @@ with col2:
     st.subheader("📈 Lap Time Comparison")
     
     #Lap time comparison
-    fig_laps = px.line()
+    fig_laps = px.line(
+        laps_df,
+        
+    )
