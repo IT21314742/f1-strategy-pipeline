@@ -164,3 +164,4 @@ with col1:
         barmode='stack',
         height=500
     )
+    
