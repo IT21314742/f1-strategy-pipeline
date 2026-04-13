@@ -145,3 +145,4 @@ with col1:
                 'WET': 'blue'
             }.get(stint['tire_compound'], 'gray')
             
+            
