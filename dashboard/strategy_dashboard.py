@@ -119,40 +119,40 @@ stints_df = load_stints(selected_race)
 laps_df = load_lap_times(selected_race)
 
 if selected_drivers:
-    stints_df = stints_df[stints_df['driver_name'].isin(selected_drivers)]
-    laps_df = laps_df[laps_df['driver_name'].isin(selected_drivers)]
-    
-    
+    stints_df = stints_df[stints_df["driver_name"].isin(selected_drivers)]
+    laps_df = laps_df[laps_df["driver_name"].isin(selected_drivers)]
+
+
 # Layout
 col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("🏎 Tire Stint Analysis")
-    
-    #Create stint chart
+
+    # Create stint chart
     fig_stints = go.Figure()
-    
-    for driver in stints_df['driver_name'].unique():
+
+    for driver in stints_df["driver_name"].unique():
         driver_stints = stints_df[stints_df["driver_name"] == driver]
-        
-        
+
         for _, stint in driver_stints.iterrows():
             color = {
-                'SOFT': 'red',
-                'MEDIUM': 'yellow',
-                'HARD': 'gray',
-                'INTERMEDIATE': 'green',
-                'WET': 'blue'
-            }.get(stint['tire_compound'], 'gray')
-            
-            fig_stints.add_trace(go.Bar(
-                name=f"{driver} - {stint['tire_compound']}",
-                x=[driver],
-                y=[stint['stint_length']],
-                base=[stint['start_lap']],
-                marker_color=color,
-                text=f"{stint['tire_compound']}<br>Laps: {stint['start_lap']}-{stint['end_lap']}",
-                hoverinfo='text',
-                showlegend=False
-            ))
-            
+                "SOFT": "red",
+                "MEDIUM": "yellow",
+                "HARD": "gray",
+                "INTERMEDIATE": "green",
+                "WET": "blue",
+            }.get(stint["tire_compound"], "gray")
+
+            fig_stints.add_trace(
+                go.Bar(
+                    name=f"{driver} - {stint['tire_compound']}",
+                    x=[driver],
+                    y=[stint["stint_length"]],
+                    base=[stint["start_lap"]],
+                    marker_color=color,
+                    text=f"{stint['tire_compound']}<br>Laps: {stint['start_lap']}-{stint['end_lap']}",
+                    hoverinfo="text",
+                    showlegend=False,
+                )
+            )
