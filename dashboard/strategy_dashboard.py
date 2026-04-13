@@ -165,4 +165,4 @@ with col1:
         height=500
     )
     
-    
+    st.plotly_chart
