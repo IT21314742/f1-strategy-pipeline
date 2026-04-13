@@ -179,3 +179,4 @@ with col2:
         title="Lap Time Throughout the Race"
     )
     
+    
