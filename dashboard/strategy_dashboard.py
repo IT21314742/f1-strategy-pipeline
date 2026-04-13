@@ -140,4 +140,5 @@ with col1:
             color = {
                 'SOFT': 'red',
                 'MEDIUM': 'yellow',
+                'HARD': 'gray',
             }
