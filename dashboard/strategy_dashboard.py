@@ -150,4 +150,5 @@ with col1:
                 x=[driver],
                 y=[stint['stint_length']],
                 base=[stint['start_lap']],
+                marker_color=color,
             ))
