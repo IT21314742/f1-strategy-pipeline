@@ -155,3 +155,4 @@ with col1:
                 hoverinfo='text',
                 showlegend=False
             ))
+            
