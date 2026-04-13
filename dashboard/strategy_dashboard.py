@@ -151,5 +151,5 @@ with col1:
                 y=[stint['stint_length']],
                 base=[stint['start_lap']],
                 marker_color=color,
-                text=f"{stint[]}"
+                text=f"{stint['tire_compound']}<br>Laps: {stint['start_lap']}-{stint['end_lap']}",
             ))
