@@ -139,4 +139,5 @@ with col1:
         for _, stint in driver_stints.iterrows():
             color = {
                 'SOFT': 'red',
+                'MEDIUM': 'yellow',
             }
