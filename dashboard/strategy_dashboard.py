@@ -136,4 +136,4 @@ with col1:
         driver_stints = stints_df[stints_df["driver_name"] == driver]
         
         
-        
+        for
