@@ -142,4 +142,5 @@ with col1:
                 'MEDIUM': 'yellow',
                 'HARD': 'gray',
                 'INTERMEDIATE': 'green',
+                'WET': 'blue'
             }
