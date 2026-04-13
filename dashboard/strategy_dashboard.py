@@ -176,4 +176,5 @@ with col2:
         x='lap_number',
         y='lap_time',
         color='driver_name',
+        title=
     )
