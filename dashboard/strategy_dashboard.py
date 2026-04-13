@@ -146,5 +146,6 @@ with col1:
             }.get(stint['tire_compound'], 'gray')
             
             fig_stints.add_trace(go.Bar(
-                name=f"{driver} - {stint['']}"
+                name=f"{driver} - {stint['tire_compound']}",
+                
             ))
