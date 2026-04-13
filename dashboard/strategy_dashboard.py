@@ -144,3 +144,4 @@ with col1:
                 'INTERMEDIATE': 'green',
                 'WET': 'blue'
             }.get(stint['tire_compound'], 'gray')
+            
