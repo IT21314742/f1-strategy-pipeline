@@ -157,4 +157,6 @@ with col1:
                 )
             )
     
-    fig_stints.update_layout()
+    fig_stints.update_layout(
+        
+    )
