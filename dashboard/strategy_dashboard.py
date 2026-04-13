@@ -156,15 +156,13 @@ with col1:
                     showlegend=False,
                 )
             )
-    
+
     fig_stints.update_layout(
         title="Tire Stints Strategy by Driver",
         xaxis_title="Driver",
         yaxis_title="Lap Number",
-        barmode='stack',
-        height=500
+        barmode="stack",
+        height=500,
     )
-    
-    st.plotly_chart(fig_stints,use_container_width=True)
-    
-    
+
+    st.plotly_chart(fig_stints, use_container_width=True)
