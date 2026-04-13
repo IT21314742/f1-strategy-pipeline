@@ -141,5 +141,5 @@ with col1:
                 'SOFT': 'red',
                 'MEDIUM': 'yellow',
                 'HARD': 'gray',
-                'INTERMEDIATE':
+                'INTERMEDIATE': 'green',
             }
