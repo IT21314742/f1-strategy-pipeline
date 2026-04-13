@@ -170,4 +170,4 @@ with col1:
 with col2:
     st.subheader("📈 Lap Time Comparison")
     
-    
+    #Lap time comparison
