@@ -161,4 +161,5 @@ with col1:
         title="Tire Stints Strategy by Driver",
         xaxis_title="Driver",
         yaxis_title="Lap Number",
+        
     )
