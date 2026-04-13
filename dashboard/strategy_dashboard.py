@@ -175,4 +175,5 @@ with col2:
         laps_df,
         x='lap_number',
         y='lap_time',
+        color=
     )
