@@ -174,4 +174,5 @@ with col2:
     fig_laps = px.line(
         laps_df,
         x='lap_number',
+        y='lap_time',
     )
