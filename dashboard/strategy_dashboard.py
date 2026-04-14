@@ -178,5 +178,5 @@ with col2:
         color='driver_name',
         title="Lap Time Throughout the Race"
     )
-        
+            
     
