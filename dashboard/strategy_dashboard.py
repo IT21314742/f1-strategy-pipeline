@@ -180,6 +180,6 @@ with col2:
     )
     
     fig_laps.update_layout(
-        
+        yaxis_title="Lap Time (seconds)",
     )
 
