@@ -179,5 +179,7 @@ with col2:
         title="Lap Time Throughout the Race"
     )
     
-    fig_laps.update_layout()
+    fig_laps.update_layout(
+        
+    )
 
