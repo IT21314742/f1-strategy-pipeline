@@ -190,5 +190,5 @@ with col2:
 # Third row: Performance Metrics
 st.subheader("📊 Key Performance Metrics")
 
-
+col3, col4, col5 = st.columns(3)
 
