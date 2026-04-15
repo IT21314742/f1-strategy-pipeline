@@ -182,5 +182,7 @@ with col2:
     fig_laps.update_layout(
         yaxis_title="Lap Time (seconds)",
         xaxis_title="Lap Number",
+        height=500
     )
+    
 
