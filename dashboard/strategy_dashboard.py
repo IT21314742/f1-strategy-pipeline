@@ -188,5 +188,5 @@ with col2:
     st.plotly_chart(fig_laps, use_container_width=True)
     
 # Third row: Performance Metrics
-st.subheader()
+st.subheader("📊 Key Performance Metrics")
 
