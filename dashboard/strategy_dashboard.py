@@ -185,5 +185,6 @@ with col2:
         height=500
     )
     
-    st.plotly_chart(fig_laps, use_container_width=)
+    st.plotly_chart(fig_laps, use_container_width=True)
+    
 
