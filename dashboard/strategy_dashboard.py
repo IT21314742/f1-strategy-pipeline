@@ -187,5 +187,5 @@ with col2:
     
     st.plotly_chart(fig_laps, use_container_width=True)
     
-    
+
 
