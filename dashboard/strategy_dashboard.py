@@ -196,5 +196,6 @@ with col3:
     #Best Stint
     best_stint = stints_df.loc[stints_df['avg_lap_time'].idxmin()]
     st.metric(
-        
+        "Longest_Stint",
+        f""
     )
