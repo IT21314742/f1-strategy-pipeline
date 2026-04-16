@@ -194,4 +194,4 @@ col3, col4, col5 = st.columns(3)
 
 with col3:
     #Best Stint
-    
+    best_stint = stints_df.loc[stints_df['avg_lap_time'].idxmin()]
