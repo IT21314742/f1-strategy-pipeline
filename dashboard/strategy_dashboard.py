@@ -201,3 +201,6 @@ with col3:
         f"Avg Lap: {best_stint['avg_lap_time']:.2f}s"
     )
     
+with col4:
+    #longest stint
+    
