@@ -5,16 +5,15 @@ import plotly.graph_objects as go
 import psycopg2
 from datetime import datetime
 
+# Page config
+st.set_page_config(page_title="F1 Strategy Dashboard", page_icon="🏁", layout="wide")
 
-# Page Config
-st.set_page_config(page_title="F1 Strategy Dashboard", page_icon="🏎️", layout="wide")
 
-
-# Database Connection
+# Database connection
 @st.cache_resource
 def init_connection():
     return psycopg2.connect(
-        host="locahost",
+        host="localhost",
         port=5432,
         database="f1_strategy",
         user="f1_analyst",
@@ -32,7 +31,19 @@ def load_races():
         SELECT race_id, race_name, circuit_name, race_date
         FROM races
         ORDER BY race_date DESC
-        """,
+    """,
+        conn,
+    )
+
+
+@st.cache_data(ttl=3600)
+def load_drivers():
+    return pd.read_sql(
+        """
+        SELECT driver_id, driver_name, team_id
+        FROM drivers
+        ORDER BY driver_name
+    """,
         conn,
     )
 
@@ -41,7 +52,7 @@ def load_races():
 def load_stints(race_id):
     return pd.read_sql(
         f"""
-        SELECT
+        SELECT 
             d.driver_name,
             s.stint_number,
             s.tire_compound,
@@ -53,16 +64,16 @@ def load_stints(race_id):
         JOIN drivers d ON s.driver_id = d.driver_id
         WHERE s.race_id = {race_id}
         ORDER BY s.start_lap
-        """,
+    """,
         conn,
     )
 
 
 @st.cache_data(ttl=3600)
 def load_lap_times(race_id):
-    return pd.read.sql(
+    return pd.read_sql(
         f"""
-        SELECT
+        SELECT 
             d.driver_name,
             l.lap_number,
             l.lap_time,
@@ -70,21 +81,21 @@ def load_lap_times(race_id):
             l.tire_compound,
             l.tire_life
         FROM lap_times l
-        JOIN drivers d ON 1.driver_id = d.driver_id
-        WHERE 1.race_id = {race_id}
-        ORDER BY 1.lap_number
-        """,
+        JOIN drivers d ON l.driver_id = d.driver_id
+        WHERE l.race_id = {race_id}
+        ORDER BY l.lap_number
+    """,
         conn,
     )
 
 
 # Title
-st.title("🏎️ F1 Strategy Analysis Dashboard")
+st.title("🏁 F1 Strategy Analysis Dashboard")
 st.markdown(
     """
-        Analyze tire strategies, pit windows, and driver performance across races.
-        Built with **FastF1**, **PostgreSQL***, and **Streamlit**.
-        """
+    Analyze tire strategies, pit windows, and driver performance across races.
+    Built with **FastF1**, **PostgreSQL**, and **Streamlit**.
+"""
 )
 
 # Sidebar
@@ -111,10 +122,9 @@ with st.sidebar:
 
     st.markdown("---")
     st.caption(f"Data Source: FastF1 API")
-    st.caption(f"last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    st.caption(f"Last Updated: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
 
-
-# Load Data
+# Load data
 stints_df = load_stints(selected_race)
 laps_df = load_lap_times(selected_race)
 
@@ -122,12 +132,11 @@ if selected_drivers:
     stints_df = stints_df[stints_df["driver_name"].isin(selected_drivers)]
     laps_df = laps_df[laps_df["driver_name"].isin(selected_drivers)]
 
-
 # Layout
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("🏎 Tire Stint Analysis")
+    st.subheader("🏎️ Tire Stint Visualization")
 
     # Create stint chart
     fig_stints = go.Figure()
@@ -139,7 +148,7 @@ with col1:
             color = {
                 "SOFT": "red",
                 "MEDIUM": "yellow",
-                "HARD": "gray",
+                "HARD": "white",
                 "INTERMEDIATE": "green",
                 "WET": "blue",
             }.get(stint["tire_compound"], "gray")
@@ -151,14 +160,14 @@ with col1:
                     y=[stint["stint_length"]],
                     base=[stint["start_lap"]],
                     marker_color=color,
-                    text=f"{stint['tire_compound']}<br>Laps: {stint['start_lap']}-{stint['end_lap']}",
+                    text=f"{stint['tire_compound']}<br>Laps {stint['start_lap']}-{stint['end_lap']}",
                     hoverinfo="text",
                     showlegend=False,
                 )
             )
 
     fig_stints.update_layout(
-        title="Tire Stints Strategy by Driver",
+        title="Tire Stint Strategy by Driver",
         xaxis_title="Driver",
         yaxis_title="Lap Number",
         barmode="stack",
@@ -176,7 +185,7 @@ with col2:
         x="lap_number",
         y="lap_time",
         color="driver_name",
-        title="Lap Time Throughout the Race",
+        title="Lap Times Throughout Race",
     )
 
     fig_laps.update_layout(
@@ -185,13 +194,13 @@ with col2:
 
     st.plotly_chart(fig_laps, use_container_width=True)
 
-# Third row: Performance Metrics
-st.subheader("📊 Key Performance Metrics")
+# Third row: Performance metrics
+st.subheader("📊 Key Performance Indicators")
 
 col3, col4, col5 = st.columns(3)
 
 with col3:
-    # Best Stint
+    # Best stint
     best_stint = stints_df.loc[stints_df["avg_lap_time"].idxmin()]
     st.metric(
         "Fastest Stint",
@@ -200,7 +209,7 @@ with col3:
     )
 
 with col4:
-    # longest stint
+    # Longest stint
     longest_stint = stints_df.loc[stints_df["stint_length"].idxmax()]
     st.metric(
         "Longest Stint",
@@ -218,21 +227,21 @@ with col5:
         f"Avg stint: {avg_stint_length.min():.1f} laps",
     )
 
-# fourth row: Tire strategy summary
-st.subheader("🛠️ Tire Compound Usage")
+# Fourth row: Tire strategy summary
+st.subheader("🔧 Tire Compound Usage")
 
 tire_summary = (
     stints_df.groupby(["driver_name", "tire_compound"]).size().unstack(fill_value=0)
 )
 st.dataframe(tire_summary, use_container_width=True)
 
-
 # Footer
 st.markdown("---")
 st.caption(
     """
-           **Strategy Insights:**
-           - Shorter stints typically indicate aggressive strategies
-           - Yellow (Medium) and Red (Soft) are most common race compounds
-           - Track position and undercut opportunities influence pit timing"""
+    **Strategy Insights:**
+    - Shorter stints typically indicate aggressive strategies
+    - Yellow (Medium) and Red (Soft) are most common race compounds
+    - Track position and undercut opportunities influence pit timing
+"""
 )
