@@ -196,7 +196,7 @@ with col3:
     #Best Stint
     best_stint = stints_df.loc[stints_df['avg_lap_time'].idxmin()]
     st.metric(
-        "Longest_Stint",
-        f"{longest_stint['driver_name']} - {longest_stint['tire_compound']}",
-        f
+        "Fastest Stint",
+        f"{best_stint['driver_name']} - {best_stint['tire_compound']}",
+        f"Avg Lap: {best_stint['avg_lap_time']:.2f}s"
     )
