@@ -203,4 +203,5 @@ with col3:
     
 with col4:
     #longest stint
+    longest_stint = stints_df.loc[stints_df['stint_length'].idxmax()]
     
