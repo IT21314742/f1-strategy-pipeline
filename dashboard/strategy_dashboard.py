@@ -207,5 +207,5 @@ with col4:
     st.metric(
         "Longest Stint",
         f"{longest_stint['driver_name']} - {longest_stint['tire_compound']}",
-        
+        f"{longest_stint['stint_length']} laps"
     )
