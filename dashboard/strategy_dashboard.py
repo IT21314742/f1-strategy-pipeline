@@ -214,3 +214,6 @@ with col5:
     #Most aggressive strategy
     avg_stint_length = stints_df.groupby('driver_name')['stint_length'].mean()
     most_aggressive = avg_stint_length.idxmin()
+    st.metric(
+        
+    )
