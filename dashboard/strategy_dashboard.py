@@ -227,3 +227,5 @@ tire_summary = (
 st.dataframe(tire_summary, use_container_width=True)
 
 
+#Footer
+st.markdown("---")
