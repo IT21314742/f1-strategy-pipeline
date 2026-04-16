@@ -211,4 +211,5 @@ with col4:
     )
     
 with col5:
+    #Most aggressive strategy
     
