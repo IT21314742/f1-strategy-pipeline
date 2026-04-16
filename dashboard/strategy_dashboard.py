@@ -225,3 +225,4 @@ st.subheader("🛠️ Tire Compound Usage")
 
 tire_summary = stints_df.groupby(['driver_name', 'tire_compound']).size().unstack
 (fill_value=0)
+st.dataframe(tire_summary, use_container_width=True)
