@@ -231,4 +231,5 @@ st.dataframe(tire_summary, use_container_width=True)
 st.markdown("---")
 st.caption("""
            **Strategy Insights:**
-           """)
+           - Shorter stints typically indicate aggressive strategies
+           - """)
