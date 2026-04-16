@@ -169,60 +169,61 @@ with col1:
 
 with col2:
     st.subheader("📈 Lap Time Comparison")
-    
-    #Lap time comparison
+
+    # Lap time comparison
     fig_laps = px.line(
         laps_df,
-        x='lap_number',
-        y='lap_time',
-        color='driver_name',
-        title="Lap Time Throughout the Race"
+        x="lap_number",
+        y="lap_time",
+        color="driver_name",
+        title="Lap Time Throughout the Race",
     )
-    
+
     fig_laps.update_layout(
-        yaxis_title="Lap Time (seconds)",
-        xaxis_title="Lap Number",
-        height=500
+        yaxis_title="Lap Time (seconds)", xaxis_title="Lap Number", height=500
     )
-    
+
     st.plotly_chart(fig_laps, use_container_width=True)
-    
+
 # Third row: Performance Metrics
 st.subheader("📊 Key Performance Metrics")
 
 col3, col4, col5 = st.columns(3)
 
 with col3:
-    #Best Stint
-    best_stint = stints_df.loc[stints_df['avg_lap_time'].idxmin()]
+    # Best Stint
+    best_stint = stints_df.loc[stints_df["avg_lap_time"].idxmin()]
     st.metric(
         "Fastest Stint",
         f"{best_stint['driver_name']} - {best_stint['tire_compound']}",
-        f"Avg Lap: {best_stint['avg_lap_time']:.2f}s"
+        f"Avg Lap: {best_stint['avg_lap_time']:.2f}s",
     )
-    
+
 with col4:
-    #longest stint
-    longest_stint = stints_df.loc[stints_df['stint_length'].idxmax()]
+    # longest stint
+    longest_stint = stints_df.loc[stints_df["stint_length"].idxmax()]
     st.metric(
         "Longest Stint",
         f"{longest_stint['driver_name']} - {longest_stint['tire_compound']}",
-        f"{longest_stint['stint_length']} laps"
+        f"{longest_stint['stint_length']} laps",
     )
-    
+
 with col5:
-    #Most aggressive strategy
-    avg_stint_length = stints_df.groupby('driver_name')['stint_length'].mean()
+    # Most aggressive strategy
+    avg_stint_length = stints_df.groupby("driver_name")["stint_length"].mean()
     most_aggressive = avg_stint_length.idxmin()
     st.metric(
         "Most Aggressive Strategy",
         most_aggressive,
-        f"Avg stint: {avg_stint_length.min():.1f} laps"
+        f"Avg stint: {avg_stint_length.min():.1f} laps",
     )
-    
+
 # fourth row: Tire strategy summary
 st.subheader("🛠️ Tire Compound Usage")
 
-tire_summary = stints_df.groupby(['driver_name', 'tire_compound']).size().unstack
-(fill_value=0)
+tire_summary = (
+    stints_df.groupby(["driver_name", "tire_compound"]).size().unstack(fill_value=0)
+)
 st.dataframe(tire_summary, use_container_width=True)
+
+
