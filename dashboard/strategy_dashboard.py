@@ -221,3 +221,5 @@ with col5:
     )
     
 # fourth row: Tire strategy summary
+st.subheader("🛠️ Tire Compound Usage")
+
