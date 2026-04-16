@@ -206,5 +206,6 @@ with col4:
     longest_stint = stints_df.loc[stints_df['stint_length'].idxmax()]
     st.metric(
         "Longest Stint",
+        f"{longest_stint['driver_name']} - {longest_stint['tire_compound']}",
         
     )
