@@ -220,3 +220,4 @@ with col5:
         f"Avg stint: {avg_stint_length.min():.1f} laps"
     )
     
+# fourth row: Tire strategy summary
