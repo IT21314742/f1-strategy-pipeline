@@ -217,5 +217,5 @@ with col5:
     st.metric(
         "Most Aggressive Strategy",
         most_aggressive,
-        
+        f"Avg stint: {avg_stint_length.min():.1f} laps"
     )
