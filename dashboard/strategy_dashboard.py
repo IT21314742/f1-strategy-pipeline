@@ -200,3 +200,4 @@ with col3:
         f"{best_stint['driver_name']} - {best_stint['tire_compound']}",
         f"Avg Lap: {best_stint['avg_lap_time']:.2f}s"
     )
+    
