@@ -223,4 +223,5 @@ with col5:
 # fourth row: Tire strategy summary
 st.subheader("🛠️ Tire Compound Usage")
 
-tire_summary = stints_df.groupby(['driver_name', 'tire_compound']).size()
+tire_summary = stints_df.groupby(['driver_name', 'tire_compound']).size().unstack
+(fill_value=0)
