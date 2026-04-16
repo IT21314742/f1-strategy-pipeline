@@ -232,4 +232,5 @@ st.markdown("---")
 st.caption("""
            **Strategy Insights:**
            - Shorter stints typically indicate aggressive strategies
-           - """)
+           - Yellow (Medium) and Red (Soft) are most common race compounds
+           """)
