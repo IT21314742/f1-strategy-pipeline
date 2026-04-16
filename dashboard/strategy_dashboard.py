@@ -227,10 +227,12 @@ tire_summary = (
 st.dataframe(tire_summary, use_container_width=True)
 
 
-#Footer
+# Footer
 st.markdown("---")
-st.caption("""
+st.caption(
+    """
            **Strategy Insights:**
            - Shorter stints typically indicate aggressive strategies
            - Yellow (Medium) and Red (Soft) are most common race compounds
-           - Track position and undercut opportunities influence pit timing""")
+           - Track position and undercut opportunities influence pit timing"""
+)
