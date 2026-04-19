@@ -1,6 +1,4 @@
--- were following a clean state protocol here. so in order to do that, first we need to clear anything in the database similar to what were gonna add later.
--- So were going to Drop tables if they exist
-
+-- Drop tables if they exist (clean slate)
 DROP TABLE IF EXISTS lap_times CASCADE;
 DROP TABLE IF EXISTS stints CASCADE;
 DROP TABLE IF EXISTS race_results CASCADE;
@@ -10,8 +8,7 @@ DROP TABLE IF EXISTS teams CASCADE;
 DROP TABLE IF EXISTS races CASCADE;
 DROP TABLE IF EXISTS seasons CASCADE;
 
-
---- Seasons dimension
+-- Seasons dimension
 CREATE TABLE seasons (
     season_id INT PRIMARY KEY,
     year INT NOT NULL UNIQUE,
@@ -77,22 +74,24 @@ CREATE TABLE race_results (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Lap times fact table (IMPORTANT)
+-- Lap times fact table (biggest table - what teams care about)
 CREATE TABLE lap_times (
     lap_id BIGSERIAL PRIMARY KEY,
     race_id INT REFERENCES races(race_id),
     driver_id VARCHAR(3) REFERENCES drivers(driver_id),
     lap_number INT NOT NULL,
-    sector1_time TIME
-    sector2_time TIME
-    sector3_time TIME
+    lap_time NUMERIC,
+    sector1_time NUMERIC,
+    sector2_time NUMERIC,
+    sector3_time NUMERIC,
+    avg_lap_time NUMERIC,
     position INT,
-    tire_compound VARCHAR,
+    tire_compound VARCHAR(10),
     tire_life INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Stints (continuos tire runs)
+-- Stints (continuous tire runs) - critical for strategy analysis
 CREATE TABLE stints (
     stint_id SERIAL PRIMARY KEY,
     race_id INT REFERENCES races(race_id),
@@ -101,7 +100,7 @@ CREATE TABLE stints (
     start_lap INT NOT NULL,
     end_lap INT NOT NULL,
     tire_compound VARCHAR(10),
-    stint_length INT
+    stint_length INT,
     avg_lap_time TIME,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
