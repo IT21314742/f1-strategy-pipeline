@@ -104,7 +104,7 @@ class F1DataPipeline:
                 ),
             )
             
-            def get_all_races()
+            def get_all_races(self, year)
 
             # Get race result
             result = race.results[race.results["Abbreviation"] == driver_code]
