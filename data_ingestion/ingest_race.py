@@ -111,6 +111,7 @@ class F1DataPipeline:
                 schedule = ff1.get_event_schedule(year)
                 # Filter out testing events, keep only Grands Prix
                 races = schedule[schedule['EventFormat'] == 'conventional']['EventName'].tolist()
+                return
 
             # Get race result
             result = race.results[race.results["Abbreviation"] == driver_code]
