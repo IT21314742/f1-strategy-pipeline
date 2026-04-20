@@ -44,6 +44,52 @@ class F1DataPipeline:
             self.conn.commit()
         return team_id
 
+    def get_all_races(self, year):
+        """Get all Grand Prix names for a given season"""
+        schedule = ff1.get_event_schedule(year)
+        # Filter out testing events, keep only Grands Prix
+        races = schedule[schedule['EventFormat'] == 'conventional']['EventName'].tolist()
+        return races
+
+    def update_driver_details(self):
+        """Update driver nationalities and birth dates"""
+        
+        # Complete 2023 driver data
+        driver_info = {
+            'VER': {'nationality': 'Netherlands', 'date_of_birth': '1997-09-30', 'driver_name': 'Max Verstappen'},
+            'PER': {'nationality': 'Mexico', 'date_of_birth': '1990-01-26', 'driver_name': 'Sergio Perez'},
+            'HAM': {'nationality': 'United Kingdom', 'date_of_birth': '1985-01-07', 'driver_name': 'Lewis Hamilton'},
+            'RUS': {'nationality': 'United Kingdom', 'date_of_birth': '1998-02-15', 'driver_name': 'George Russell'},
+            'LEC': {'nationality': 'Monaco', 'date_of_birth': '1997-10-16', 'driver_name': 'Charles Leclerc'},
+            'SAI': {'nationality': 'Spain', 'date_of_birth': '1994-09-01', 'driver_name': 'Carlos Sainz'},
+            'NOR': {'nationality': 'United Kingdom', 'date_of_birth': '1999-11-13', 'driver_name': 'Lando Norris'},
+            'PIA': {'nationality': 'Australia', 'date_of_birth': '2001-04-02', 'driver_name': 'Oscar Piastri'},
+            'ALO': {'nationality': 'Spain', 'date_of_birth': '1981-07-29', 'driver_name': 'Fernando Alonso'},
+            'STR': {'nationality': 'Canada', 'date_of_birth': '1998-10-29', 'driver_name': 'Lance Stroll'},
+            'GAS': {'nationality': 'France', 'date_of_birth': '1996-02-07', 'driver_name': 'Pierre Gasly'},
+            'OCO': {'nationality': 'France', 'date_of_birth': '1996-09-17', 'driver_name': 'Esteban Ocon'},
+            'TSU': {'nationality': 'Japan', 'date_of_birth': '2000-05-11', 'driver_name': 'Yuki Tsunoda'},
+            'RIC': {'nationality': 'Australia', 'date_of_birth': '1989-07-01', 'driver_name': 'Daniel Ricciardo'},
+            'HUL': {'nationality': 'Germany', 'date_of_birth': '1987-08-19', 'driver_name': 'Nico Hulkenberg'},
+            'MAG': {'nationality': 'Denmark', 'date_of_birth': '1992-10-05', 'driver_name': 'Kevin Magnussen'},
+            'BOT': {'nationality': 'Finland', 'date_of_birth': '1989-08-28', 'driver_name': 'Valtteri Bottas'},
+            'ZHO': {'nationality': 'China', 'date_of_birth': '1999-05-30', 'driver_name': 'Zhou Guanyu'},
+            'ALB': {'nationality': 'Thailand', 'date_of_birth': '1996-03-23', 'driver_name': 'Alexander Albon'},
+            'SAR': {'nationality': 'United States', 'date_of_birth': '2000-10-27', 'driver_name': 'Logan Sargeant'},
+        }
+        
+        updated_count = 0
+        for driver_id, info in driver_info.items():
+            self.cursor.execute("""
+                UPDATE drivers 
+                SET nationality = %s, date_of_birth = %s, driver_name = %s
+                WHERE driver_id = %s
+            """, (info['nationality'], info['date_of_birth'], info['driver_name'], driver_id))
+            updated_count += 1
+        
+        self.conn.commit()
+        print(f"✅ Updated {updated_count} drivers with nationality and DOB")
+
     def ingest_race(self, year, grand_prix):
         print(f"🏁 Ingesting {year} {grand_prix}...")
 
@@ -103,15 +149,6 @@ class F1DataPipeline:
                     ),
                 ),
             )
-            
-            def get_all_races(self, year):
-                """
-                Get all Grand Prix names for a given season.
-                """
-                schedule = ff1.get_event_schedule(year)
-                # Filter out testing events, keep only Grands Prix
-                races = schedule[schedule['EventFormat'] == 'conventional']['EventName'].tolist()
-                return races
 
             # Get race result
             result = race.results[race.results["Abbreviation"] == driver_code]
@@ -135,7 +172,7 @@ class F1DataPipeline:
         self.conn.commit()
         print(f"   Processed {len(race.drivers)} drivers")
 
-        # Process lap times - THE PROBLEM AREA
+        # Process lap times
         laps = race.laps
         lap_data = []
 
@@ -227,7 +264,7 @@ class F1DataPipeline:
 
         print(f"   Processed {len(lap_data)} laps")
 
-        # Process stints (similar batch approach)
+        # Process stints
         stints_data = []
         for driver in race.drivers:
             driver_laps = race.laps.pick_driver(driver)
@@ -319,5 +356,27 @@ class F1DataPipeline:
 
 if __name__ == "__main__":
     pipeline = F1DataPipeline()
-    pipeline.ingest_race(2023, "Monaco")
+    
+    # Update driver details first (adds nationality and DOB)
+    pipeline.update_driver_details()
+    
+    # Get all 2023 races automatically
+    all_races = pipeline.get_all_races(2023)
+    print(f"\n🏁 Found {len(all_races)} races for 2023 season:")
+    for i, race in enumerate(all_races, 1):
+        print(f"   {i}. {race}")
+    
+    # Ingest each race
+    print("\n" + "="*50)
+    for race in all_races:
+        try:
+            pipeline.ingest_race(2023, race)
+        except Exception as e:
+            print(f"❌ Failed {race}: {e}")
+            continue
+    
     pipeline.close()
+    print("\n" + "="*50)
+    print("🎉 Complete 2023 season ingested successfully!")
+    print(f"   Total races: {len(all_races)}")
+    print("   Run your dashboard: streamlit run dashboard/strategy_dashboard.py")
