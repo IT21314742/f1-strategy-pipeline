@@ -106,7 +106,7 @@ class F1DataPipeline:
             
             def get_all_races(self, year):
                 """
-                Get all Grand
+                Get all Grand Prix names
                 """
                 
 
