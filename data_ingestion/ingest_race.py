@@ -108,7 +108,7 @@ class F1DataPipeline:
                 """
                 Get all Grand Prix names for a given season.
                 """
-                schedule = ff1.get_event_schedule
+                schedule = ff1.get_event_schedule(year)
 
             # Get race result
             result = race.results[race.results["Abbreviation"] == driver_code]
