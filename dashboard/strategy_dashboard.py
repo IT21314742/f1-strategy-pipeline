@@ -1,3 +1,21 @@
+import sys
+print("Python path:", sys.executable)
+print("Python version:", sys.version)
+print("Module search paths:", sys.path)
+
+# Try to find plotly
+try:
+    import plotly
+    print("Plotly found at:", plotly.__file__)
+except ImportError:
+    print("Plotly NOT found in this Python environment")
+    import subprocess
+    subprocess.call([sys.executable, "-m", "pip", "list"])
+    sys.exit(1)
+
+
+
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -245,4 +263,3 @@ st.caption(
     - Track position and undercut opportunities influence pit timing
 """
 )
-                                                    
