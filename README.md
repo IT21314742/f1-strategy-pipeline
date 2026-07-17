@@ -18,3 +18,8 @@ The pipeline transforms raw timing data into optimal race strategies, allowing e
 ---
 
 ## 🧠 How the Project Works
+
+- FastF1 API Integration: Automatically fetches real F1 session data (lap times, telemetry, weather)
+- PostgreSQL Database: Persists all raw and processed data for historical analysis
+- SQL Schema: Optimized relational schema for race, driver, lap, and tire data
+- Docker Deployment: Full containerization for easy setup and reproducibility
