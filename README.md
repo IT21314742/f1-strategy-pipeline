@@ -25,3 +25,7 @@ The pipeline transforms raw timing data into optimal race strategies, allowing e
 - Docker Deployment: Full containerization for easy setup and reproducibility
 
 ### 2. Performance Modeling
+- Tire Degradation Curves: Fits exponential/polynomial degradation models per compound (Soft, Medium, Hard, Intermediate, Wet)
+- Fuel Load Effect: Calculates lap time penalty based on fuel weight and consumption rates
+- Stint Analysis: Computes average lap times, consistency metrics, and tire wear rates
+- Track Characteristics: Incorporates track-specific data (length, corners, surface grip)
