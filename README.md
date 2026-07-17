@@ -29,3 +29,8 @@ The pipeline transforms raw timing data into optimal race strategies, allowing e
 - Fuel Load Effect: Calculates lap time penalty based on fuel weight and consumption rates
 - Stint Analysis: Computes average lap times, consistency metrics, and tire wear rates
 - Track Characteristics: Incorporates track-specific data (length, corners, surface grip)
+
+### 3. Strategy Simulation Engine
+- Monte Carlo Simulation: Tests thousands of strategy combinations with stochastic elements
+- Dynamic Programming: Finds optimal pit-stop windows using state-space search.
+- 
