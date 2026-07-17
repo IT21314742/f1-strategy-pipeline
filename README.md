@@ -14,3 +14,7 @@ The pipeline transforms raw timing data into optimal race strategies, allowing e
 - Create a modern, interactive dashboard for strategy visualization and analysis
 - Provide a robust data pipeline with PostgreSQL persistence and Docker containerization
 - Build an extensible architecture for adding weather, traffic, and safety car dynamics
+
+---
+
+## 🧠 How the Project Works
