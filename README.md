@@ -8,7 +8,9 @@ The pipeline transforms raw timing data into optimal race strategies, allowing e
 
 ## 🎯 Project Goals
 - Build a modular, production-ready F1 strategy simulation engine
-
 - Integrate real F1 telemetry data (via FastF1 API) for accurate modeling
-
 - Implement advanced tire degradation and fuel effect models using scientific curve fitting
+- Develop a high-performance simulation framework capable of testing thousands of strategies per race
+- Create a modern, interactive dashboard for strategy visualization and analysis
+- Provide a robust data pipeline with PostgreSQL persistence and Docker containerization
+- Build an extensible architecture for adding weather, traffic, and safety car dynamics
