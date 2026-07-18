@@ -31,6 +31,7 @@ The pipeline transforms raw timing data into optimal race strategies, allowing e
 - Track Characteristics: Incorporates track-specific data (length, corners, surface grip)
 
 ### 3. Strategy Simulation Engine
-- Monte Carlo Simulation: Tests thousands of strategy combinations with stochastic elements
+- Monte Carlo Simulation: Tests thousands of strategy combinations with stochastic elements.
 - Dynamic Programming: Finds optimal pit-stop windows using state-space search.
+- Multi-Objective Optimization: Balances total race time, tire wear, and risk factors.
 - 
