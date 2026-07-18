@@ -34,4 +34,7 @@ The pipeline transforms raw timing data into optimal race strategies, allowing e
 - Monte Carlo Simulation: Tests thousands of strategy combinations with stochastic elements.
 - Dynamic Programming: Finds optimal pit-stop windows using state-space search.
 - Multi-Objective Optimization: Balances total race time, tire wear, and risk factors.
-- 
+- Real-time Recalculation: Updates strategies based on changing race conditions.
+
+### Visualization & Analysis Dashboard
+
