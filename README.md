@@ -36,5 +36,7 @@ The pipeline transforms raw timing data into optimal race strategies, allowing e
 - Multi-Objective Optimization: Balances total race time, tire wear, and risk factors.
 - Real-time Recalculation: Updates strategies based on changing race conditions.
 
-### Visualization & Analysis Dashboard
+### 4. Visualization & Analysis Dashboard
+- Interactive Web Dashboard: Built with modern JavaScript frameworks.
+- 
 
