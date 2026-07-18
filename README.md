@@ -39,5 +39,6 @@ The pipeline transforms raw timing data into optimal race strategies, allowing e
 ### 4. Visualization & Analysis Dashboard
 - Interactive Web Dashboard: Built with modern JavaScript frameworks.
 - Strategy Comparison: Side-by-side analysis of top strategies.
+- Lap Time Traces: Visualize simulated vs. actual lap times.
 - 
 
